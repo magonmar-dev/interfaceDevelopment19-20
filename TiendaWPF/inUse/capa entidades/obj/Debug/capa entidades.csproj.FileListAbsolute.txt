@@ -1,0 +1,27 @@
+E:\Proyecto 1ev\TiendaDAM\capa entidades\bin\Debug\capa entidades.dll
+E:\Proyecto 1ev\TiendaDAM\capa entidades\bin\Debug\capa entidades.pdb
+E:\Proyecto 1ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.csprojAssemblyReference.cache
+E:\Proyecto 1ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.dll
+E:\Proyecto 1ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\bin\Debug\capa entidades.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\bin\Debug\capa entidades.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.csprojAssemblyReference.cache
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\bin\Debug\Newtonsoft.Json.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\bin\Debug\System.Net.Http.Formatting.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\bin\Debug\Newtonsoft.Json.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\bin\Debug\System.Net.Http.Formatting.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.csproj.CopyComplete
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa entidades\bin\Debug\capa entidades.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\bin\Debug\capa entidades.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\bin\Debug\capa entidades.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\bin\Debug\capa entidades.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\bin\Debug\Newtonsoft.Json.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\bin\Debug\System.Net.Http.Formatting.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\bin\Debug\Newtonsoft.Json.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\bin\Debug\System.Net.Http.Formatting.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.csprojAssemblyReference.cache
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.csproj.CopyComplete
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa entidades\obj\Debug\capa entidades.pdb
