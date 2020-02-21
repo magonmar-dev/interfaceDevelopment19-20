@@ -1,0 +1,38 @@
+C:\Users\maria\OneDrive\Escritorio\capa negocio\bin\Debug\capa negocio.dll
+C:\Users\maria\OneDrive\Escritorio\capa negocio\bin\Debug\capa negocio.pdb
+C:\Users\maria\OneDrive\Escritorio\capa negocio\bin\Debug\capa datos.dll
+C:\Users\maria\OneDrive\Escritorio\capa negocio\bin\Debug\capa datos.pdb
+C:\Users\maria\OneDrive\Escritorio\capa negocio\obj\Debug\capa negocio.csprojAssemblyReference.cache
+C:\Users\maria\OneDrive\Escritorio\capa negocio\obj\Debug\capa negocio.csproj.CoreCompileInputs.cache
+C:\Users\maria\OneDrive\Escritorio\capa negocio\obj\Debug\capa negocio.csproj.CopyComplete
+C:\Users\maria\OneDrive\Escritorio\capa negocio\obj\Debug\capa negocio.dll
+C:\Users\maria\OneDrive\Escritorio\capa negocio\obj\Debug\capa negocio.pdb
+E:\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa negocio.dll
+E:\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa negocio.pdb
+E:\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa datos.dll
+E:\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa entidades.dll
+E:\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\Newtonsoft.Json.dll
+E:\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa datos.pdb
+E:\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa entidades.pdb
+E:\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\Newtonsoft.Json.xml
+E:\Proyecto 1ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.csprojAssemblyReference.cache
+E:\Proyecto 1ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.csproj.CopyComplete
+E:\Proyecto 1ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.dll
+E:\Proyecto 1ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa negocio.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa negocio.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa datos.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa entidades.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\Newtonsoft.Json.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa datos.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa entidades.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\Newtonsoft.Json.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.csprojAssemblyReference.cache
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.csproj.CopyComplete
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa negocio.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\System.Net.Http.Formatting.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa datos.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\System.Net.Http.Formatting.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa negocio\bin\Debug\capa entidades.dll.config
