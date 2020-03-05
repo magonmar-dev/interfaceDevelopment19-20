@@ -35,8 +35,6 @@
             this.btnSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.btnUsuarios = new System.Windows.Forms.ToolStripDropDownButton();
             this.btnProductos = new System.Windows.Forms.ToolStripDropDownButton();
-            this.btnConsultar = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnModificarProd = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPedidos = new System.Windows.Forms.ToolStripDropDownButton();
             this.btnNuevo = new System.Windows.Forms.ToolStripMenuItem();
             this.btnConsultMod = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +64,7 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
@@ -89,6 +87,7 @@
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnSalir});
+            this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.White;
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Margin = new System.Windows.Forms.Padding(2);
@@ -106,6 +105,7 @@
             // btnUsuarios
             // 
             this.btnUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
             this.btnUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
@@ -117,27 +117,14 @@
             // btnProductos
             // 
             this.btnProductos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnConsultar,
-            this.btnModificarProd});
+            this.btnProductos.ForeColor = System.Drawing.Color.White;
             this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
             this.btnProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(89, 24);
             this.btnProductos.Text = "Productos";
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(224, 26);
-            this.btnConsultar.Text = "Consultar";
-            // 
-            // btnModificarProd
-            // 
-            this.btnModificarProd.Name = "btnModificarProd";
-            this.btnModificarProd.Size = new System.Drawing.Size(224, 26);
-            this.btnModificarProd.Text = "Modificar";
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnPedidos
             // 
@@ -146,6 +133,7 @@
             this.btnNuevo,
             this.btnConsultMod,
             this.btnEliminarPed});
+            this.btnPedidos.ForeColor = System.Drawing.Color.White;
             this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
             this.btnPedidos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPedidos.Margin = new System.Windows.Forms.Padding(2);
@@ -173,6 +161,8 @@
             // 
             // btnEstadisticas
             // 
+            this.btnEstadisticas.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
+            this.btnEstadisticas.ForeColor = System.Drawing.Color.White;
             this.btnEstadisticas.Margin = new System.Windows.Forms.Padding(2);
             this.btnEstadisticas.Name = "btnEstadisticas";
             this.btnEstadisticas.Size = new System.Drawing.Size(85, 24);
@@ -184,6 +174,7 @@
             this.btnInformes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnFactura,
             this.btnStock});
+            this.btnInformes.ForeColor = System.Drawing.Color.White;
             this.btnInformes.Image = ((System.Drawing.Image)(resources.GetObject("btnInformes.Image")));
             this.btnInformes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInformes.Margin = new System.Windows.Forms.Padding(2);
@@ -194,17 +185,19 @@
             // btnFactura
             // 
             this.btnFactura.Name = "btnFactura";
-            this.btnFactura.Size = new System.Drawing.Size(139, 26);
+            this.btnFactura.Size = new System.Drawing.Size(224, 26);
             this.btnFactura.Text = "Factura";
             // 
             // btnStock
             // 
             this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(139, 26);
+            this.btnStock.Size = new System.Drawing.Size(224, 26);
             this.btnStock.Text = "Stock";
             // 
             // btnAcerca
             // 
+            this.btnAcerca.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
+            this.btnAcerca.ForeColor = System.Drawing.Color.White;
             this.btnAcerca.Margin = new System.Windows.Forms.Padding(2);
             this.btnAcerca.Name = "btnAcerca";
             this.btnAcerca.Size = new System.Drawing.Size(84, 24);
@@ -212,8 +205,10 @@
             // 
             // lblUsuario
             // 
+            this.lblUsuario.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
             this.lblUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.lblUsuario.AutoSize = false;
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(100, 24);
@@ -222,7 +217,7 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
@@ -230,7 +225,7 @@
             this.lblHora,
             this.lblTimer,
             this.toolStripStatusLabel5});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 951);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 820);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
             this.statusStrip1.Size = new System.Drawing.Size(1262, 26);
@@ -244,18 +239,21 @@
             // 
             // lblStatus
             // 
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(1146, 20);
+            this.lblStatus.Size = new System.Drawing.Size(1107, 20);
             this.lblStatus.Spring = true;
             // 
             // lblHora
             // 
+            this.lblHora.ForeColor = System.Drawing.Color.White;
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(42, 20);
             this.lblHora.Text = "Hora";
             // 
             // lblTimer
             // 
+            this.lblTimer.ForeColor = System.Drawing.Color.White;
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(47, 20);
             this.lblTimer.Text = "Timer";
@@ -304,6 +302,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(15)))));
             this.panel1.Location = new System.Drawing.Point(0, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1262, 786);
@@ -315,16 +314,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1262, 977);
+            this.ClientSize = new System.Drawing.Size(1262, 846);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipal_FormClosing);
             this.toolStrip1.ResumeLayout(false);
@@ -343,8 +344,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnSalir;
         private System.Windows.Forms.ToolStripDropDownButton btnUsuarios;
         private System.Windows.Forms.ToolStripDropDownButton btnProductos;
-        private System.Windows.Forms.ToolStripMenuItem btnConsultar;
-        private System.Windows.Forms.ToolStripMenuItem btnModificarProd;
         private System.Windows.Forms.ToolStripDropDownButton btnPedidos;
         private System.Windows.Forms.ToolStripMenuItem btnNuevo;
         private System.Windows.Forms.ToolStripMenuItem btnConsultMod;

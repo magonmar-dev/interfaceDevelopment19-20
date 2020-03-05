@@ -18,6 +18,9 @@ namespace capa_presentacion
         private List<Usuario> listaUsuarios;
         private List<Localidad> listaPueblos;
         private List<Provincia> listaProvincias;
+        private List<Pedido> listaPedidos;
+
+        private Usuario selectedUser;
 
         public Usuarios(Negocio neg)
         {
@@ -34,11 +37,6 @@ namespace capa_presentacion
 
             vista = new DataView(dt);
             dataGridView.DataSource = vista;
-            dataGridView.Columns[0].Width = 30;
-            dataGridView.Columns[1].Width = 80;
-            dataGridView.Columns[2].Width = 170;
-            dataGridView.Columns[3].Width = 120;
-            dataGridView.Columns[4].Width = 80;
 
             listaProvincias = neg.GetProvincias();
             foreach(Provincia p in listaProvincias)
@@ -47,14 +45,39 @@ namespace capa_presentacion
             }
             cbProvincia.SelectedIndex = 0;
 
-            listaPueblos = neg.GetLocalidades();
-            foreach (Localidad l in listaPueblos)
-            {
-                cbPueblo.Items.Add(l.Nombre);
-            }
-            cbPueblo.SelectedIndex = 0;
+            listaPueblos = neg.GetLocalidades(listaProvincias[0].ProvinciaID);
 
             leer_usuarios();
+            listaPedidos = neg.GetPedidos();
+        }
+
+        private string obtenerCodigoProvincia()
+        {
+            foreach (Provincia provincia in listaProvincias)
+                if (provincia.Nombre.Equals(cbProvincia.Text))
+                    return provincia.ProvinciaID;
+
+            return null;
+        }
+
+        private void cbProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            rellenarPueblos();
+        }
+
+        private void rellenarPueblos()
+        {
+            cbPueblo.Items.Clear();
+
+            if ((listaPueblos = neg.GetLocalidades(obtenerCodigoProvincia())) != null)
+            {
+                foreach (Localidad l in listaPueblos)
+                {
+                    cbPueblo.Items.Add(l.Nombre);
+                }
+                if(cbPueblo.Items.Count != 0)
+                    cbPueblo.SelectedIndex = 0;
+            }
         }
 
         public void leer_usuarios()
@@ -220,21 +243,111 @@ namespace capa_presentacion
             string puebloID = listaPueblos[cbPueblo.SelectedIndex].LocalidadID;
             string provinciaID = listaProvincias[cbProvincia.SelectedIndex].ProvinciaID;
             string fecha = dtpNac.Value.ToString("yyyy-MM-dd");
-            if (neg.Insertar(id, txbEmail.Text.Trim(), txbPass.Text.Trim(), txbNom.Text.Trim(), txbApe.Text.Trim(),
+            if (neg.InsertarUsuario(id, txbEmail.Text.Trim(), txbPass.Text.Trim(), txbNom.Text.Trim(), txbApe.Text.Trim(),
                 txbDNI.Text.Trim(), mtxbTel.Text.Trim(), txbDir1.Text.Trim(), txbDir2.Text.Trim(), txbCod.Text.Trim(), 
                 puebloID, provinciaID, fecha))
             {
-                MessageBox.Show("Usuario insertado");
+                MessageBox.Show("Usuario insertado", "Insertar usuario",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 leer_usuarios();
             }
             else
             {
-                MessageBox.Show("Error al insertar el usuario");
+                MessageBox.Show("Error al insertar el usuario", "Insertar usuario",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnMod_Click(object sender, EventArgs e)
+        {
+            if(selectedUser !=  null)
+            {
+                int id = selectedUser.UsuarioID;
+                string puebloID = listaPueblos[cbPueblo.SelectedIndex].LocalidadID;
+                string provinciaID = listaProvincias[cbProvincia.SelectedIndex].ProvinciaID;
+                string fecha = dtpNac.Value.ToString("yyyy-MM-dd");
+                if (neg.ModificarUsuario(id, txbEmail.Text.Trim(), selectedUser.Password, txbNom.Text.Trim(), txbApe.Text.Trim(),
+                    txbDNI.Text.Trim(), mtxbTel.Text.Trim(), txbDir1.Text.Trim(), txbDir2.Text.Trim(), txbCod.Text.Trim(),
+                    puebloID, provinciaID, fecha))
+                {
+                    MessageBox.Show("Usuario modificado", "Modificar usuario",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    leer_usuarios();
+                }
+                else
+                {
+                    MessageBox.Show("Error al modificar el usuario", "Modificar usuario",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                txbPass.Enabled = true;
+                txbRepPass.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el usuario que quiere modificar", "Modificar usuario", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnEli_Click(object sender, EventArgs e)
+        {
+            if (selectedUser != null)
+            {
+                int id = selectedUser.UsuarioID;
+
+                DialogResult result = MessageBox.Show("¿Seguro que quiere eliminar este usuario?\n\n" +
+                    "Nombre: " + selectedUser.Nombre + "\nApellidos: " + selectedUser.Apellidos
+                    + "\nDNI: " + selectedUser.Dni + "\nEmail: " + selectedUser.Email
+                    , "Eliminar usuario " + id, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    bool tienePedidos = false;
+                    foreach(Pedido pedido in listaPedidos)
+                    {
+                        if (pedido.UsuarioID == selectedUser.UsuarioID)
+                            tienePedidos = true;
+                    }
+
+                    if(tienePedidos)
+                    {
+                        MessageBox.Show("No se puede eliminar un usuario que tenga pedidos en la base de datos", "Eliminar usuario",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tienePedidos = false;
+                    }
+                    else
+                    {
+                        if (neg.EliminarUsuario(id))
+                        {
+                            MessageBox.Show("Usuario eliminado", "Eliminar usuario",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            leer_usuarios();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al eliminar el usuario", "Eliminar usuario",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                        txbPass.Enabled = true;
+                        txbRepPass.Enabled = true;
+                    }                    
+                }
+                else if (result == DialogResult.No) {}
+            }
+            else 
+            {
+                MessageBox.Show("Seleccione el usuario que quiere eliminar", "Eliminar usuario", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
         private void txbNomB_KeyPress(object sender, KeyPressEventArgs e)
         {
+            txbApeB.Clear();
+            txbEmailB.Clear();
+            txbDniB.Clear();
             string aux = txbNomB.Text;
 
             if (aux == "")
@@ -245,6 +358,10 @@ namespace capa_presentacion
 
         private void txbApeB_KeyPress(object sender, KeyPressEventArgs e)
         {
+            txbNomB.Clear();
+            txbEmailB.Clear();
+            txbDniB.Clear();
+
             string aux = txbApeB.Text;
 
             if (aux == "")
@@ -255,6 +372,10 @@ namespace capa_presentacion
 
         private void txbEmailB_TextChanged(object sender, EventArgs e)
         {
+            txbNomB.Clear();
+            txbApeB.Clear();
+            txbDniB.Clear();
+
             string aux = txbEmailB.Text;
 
             if (aux == "")
@@ -265,12 +386,69 @@ namespace capa_presentacion
 
         private void txbDniB_TextChanged(object sender, EventArgs e)
         {
+            txbNomB.Clear();
+            txbApeB.Clear();
+            txbEmailB.Clear();
+
             string aux = txbDniB.Text;
 
             if (aux == "")
                 aux = "*";
 
             vista.RowFilter = "DNI LIKE '" + aux + "*'";
+        }
+
+        private string obtenerProvincia(string codigoProvincia)
+        {
+            foreach (Provincia provincia in listaProvincias)
+                if (provincia.ProvinciaID.Equals(codigoProvincia))
+                    return provincia.Nombre;
+
+            return null;
+        }
+
+        private string obtenerLocalidad(string codigoLocalidad)
+        {
+            foreach (Localidad localidad in listaPueblos)
+                if (localidad.LocalidadID.Equals(codigoLocalidad))
+                    return localidad.Nombre;
+
+            return null;
+        }
+
+        private void dataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow row = dataGridView.SelectedRows[0];
+            string id = row.Cells[0].Value.ToString();
+            selectedUser = neg.GetUsuario(id);
+
+            if (selectedUser.Email != null)
+                txbEmail.Text = selectedUser.Email;
+            txbPass.Enabled = false;
+            txbRepPass.Enabled = false;
+            if (selectedUser.Nombre != null)
+                txbNom.Text = selectedUser.Nombre;
+            if (selectedUser.Apellidos != null)
+                txbApe.Text = selectedUser.Apellidos;
+            if (selectedUser.Dni != null)
+                txbDNI.Text = selectedUser.Dni;
+            if (selectedUser.Telefono != null)
+                mtxbTel.Text = selectedUser.Telefono;
+            if (selectedUser.Calle != null)
+                txbDir1.Text = selectedUser.Calle;
+            if (selectedUser.Calle2 != null)
+                txbDir2.Text = selectedUser.Calle2;
+            if (selectedUser.Codpos != null)
+                txbCod.Text = selectedUser.Codpos;
+            if (selectedUser.ProvinciaID != null)
+            {
+                cbProvincia.SelectedItem = obtenerProvincia(selectedUser.ProvinciaID);
+                rellenarPueblos();
+            }
+            if (selectedUser.PuebloID != null)
+                cbPueblo.SelectedItem = obtenerLocalidad(selectedUser.PuebloID);
+            if (selectedUser.Nacido != null)
+                dtpNac.Value = DateTime.Parse(selectedUser.Nacido);
         }
     }
 }

@@ -13,6 +13,7 @@ namespace capa_presentacion
         {
             neg = new Negocio();
             InitializeComponent();
+            label3.Visible = false;
         }
 
         private void button1_Click(object sender, System.EventArgs e)
@@ -21,12 +22,13 @@ namespace capa_presentacion
 
             if (neg.Validar(textBox1.Text, textBox2.Text))
             {
+                label3.Visible = false;
                 f2.Show();
                 Hide();
-            } 
+            }
             else
             {
-                label3.BackColor = System.Drawing.Color.Red;
+                label3.Visible = true;
                 label3.Text = "Acceso denegado";
                 maxIntentos--;
                 if (maxIntentos <= 0)

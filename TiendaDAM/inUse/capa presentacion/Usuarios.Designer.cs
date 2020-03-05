@@ -77,15 +77,28 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AllowUserToOrderColumns = true;
+            this.dataGridView.AllowUserToResizeRows = false;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridView.Location = new System.Drawing.Point(23, 12);
+            this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView.RowHeadersWidth = 25;
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(716, 754);
+            this.dataGridView.StandardTab = true;
             this.dataGridView.TabIndex = 0;
+            this.dataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_RowHeaderMouseClick);
             // 
             // txbEmail
             // 
@@ -305,13 +318,13 @@
             this.groupBox1.Controls.Add(this.txbApe);
             this.groupBox1.Controls.Add(this.txbDNI);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
             this.groupBox1.Location = new System.Drawing.Point(760, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(466, 455);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "DATOS DEL NUEVO USUARIO";
+            this.groupBox1.Text = "DATOS DEL USUARIO";
             // 
             // txbRepPass
             // 
@@ -351,6 +364,7 @@
             this.cbProvincia.Name = "cbProvincia";
             this.cbProvincia.Size = new System.Drawing.Size(239, 26);
             this.cbProvincia.TabIndex = 11;
+            this.cbProvincia.SelectedIndexChanged += new System.EventHandler(this.cbProvincia_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -397,41 +411,43 @@
             // 
             // btnIns
             // 
-            this.btnIns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnIns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.btnIns.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIns.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnIns.Location = new System.Drawing.Point(764, 706);
+            this.btnIns.Location = new System.Drawing.Point(760, 702);
             this.btnIns.Name = "btnIns";
-            this.btnIns.Size = new System.Drawing.Size(134, 43);
-            this.btnIns.TabIndex = 24;
+            this.btnIns.Size = new System.Drawing.Size(140, 50);
+            this.btnIns.TabIndex = 18;
             this.btnIns.Text = "INSERTAR";
             this.btnIns.UseVisualStyleBackColor = false;
             this.btnIns.Click += new System.EventHandler(this.btnIns_Click);
             // 
             // btnEli
             // 
-            this.btnEli.BackColor = System.Drawing.Color.Aqua;
+            this.btnEli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.btnEli.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEli.Location = new System.Drawing.Point(1092, 706);
+            this.btnEli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEli.Location = new System.Drawing.Point(1086, 702);
             this.btnEli.Name = "btnEli";
-            this.btnEli.Size = new System.Drawing.Size(134, 43);
-            this.btnEli.TabIndex = 25;
+            this.btnEli.Size = new System.Drawing.Size(140, 50);
+            this.btnEli.TabIndex = 20;
             this.btnEli.Text = "ELIMINAR";
             this.btnEli.UseVisualStyleBackColor = false;
+            this.btnEli.Click += new System.EventHandler(this.btnEli_Click);
             // 
             // btnMod
             // 
-            this.btnMod.BackColor = System.Drawing.Color.Aqua;
+            this.btnMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
             this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMod.Location = new System.Drawing.Point(928, 706);
+            this.btnMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMod.Location = new System.Drawing.Point(919, 702);
             this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(134, 43);
-            this.btnMod.TabIndex = 26;
+            this.btnMod.Size = new System.Drawing.Size(145, 50);
+            this.btnMod.TabIndex = 19;
             this.btnMod.Text = "MODIFICAR";
             this.btnMod.UseVisualStyleBackColor = false;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // errorProvider1
             // 
@@ -448,7 +464,7 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txbApeB);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
             this.groupBox2.Location = new System.Drawing.Point(760, 497);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(466, 173);
@@ -476,7 +492,7 @@
             this.txbDniB.MaxLength = 12;
             this.txbDniB.Name = "txbDniB";
             this.txbDniB.Size = new System.Drawing.Size(239, 24);
-            this.txbDniB.TabIndex = 23;
+            this.txbDniB.TabIndex = 17;
             this.txbDniB.TextChanged += new System.EventHandler(this.txbDniB_TextChanged);
             // 
             // label15
@@ -499,7 +515,7 @@
             this.txbEmailB.MaxLength = 50;
             this.txbEmailB.Name = "txbEmailB";
             this.txbEmailB.Size = new System.Drawing.Size(239, 24);
-            this.txbEmailB.TabIndex = 21;
+            this.txbEmailB.TabIndex = 16;
             this.txbEmailB.TextChanged += new System.EventHandler(this.txbEmailB_TextChanged);
             // 
             // label13
@@ -521,7 +537,7 @@
             this.txbNomB.MaxLength = 35;
             this.txbNomB.Name = "txbNomB";
             this.txbNomB.Size = new System.Drawing.Size(239, 24);
-            this.txbNomB.TabIndex = 17;
+            this.txbNomB.TabIndex = 14;
             this.txbNomB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNomB_KeyPress);
             // 
             // label14
@@ -543,14 +559,14 @@
             this.txbApeB.MaxLength = 55;
             this.txbApeB.Name = "txbApeB";
             this.txbApeB.Size = new System.Drawing.Size(239, 24);
-            this.txbApeB.TabIndex = 18;
+            this.txbApeB.TabIndex = 15;
             this.txbApeB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbApeB_KeyPress);
             // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1254, 778);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnMod);

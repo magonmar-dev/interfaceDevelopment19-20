@@ -7,8 +7,9 @@ namespace capa_presentacion
 {
    public partial class FormPrincipal : Form
    {
-        private Usuarios formUsuarios;
         private Negocio neg;
+        private Usuarios formUsuarios;
+        private Productos formProductos;        
 
         DateTime timer;
         double seconds = 0;
@@ -26,6 +27,8 @@ namespace capa_presentacion
             timer1.Start();
             timer = new DateTime();
             lblTimer.Text = timer.ToString("HH:mm:ss");
+
+            lanzarFormUsuarios();
         }
 
         private void btnSalir_Click(object sender, System.EventArgs e)
@@ -70,7 +73,7 @@ namespace capa_presentacion
             Hide();
         }
 
-        private void btnUsuarios_Click(object sender, EventArgs e)
+        private void lanzarFormUsuarios()
         {
             cierra_formularios();
 
@@ -86,6 +89,11 @@ namespace capa_presentacion
             formUsuarios.Show();
         }
 
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            lanzarFormUsuarios();
+        }
+
         private void cierra_formularios()
         {
             this.Controls.Remove(panel1);
@@ -95,6 +103,22 @@ namespace capa_presentacion
                 Form f = this.MdiChildren[i];
                 f.Close();
             }
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            cierra_formularios();
+
+            this.IsMdiContainer = false;
+            this.IsMdiContainer = true;
+
+            formProductos = new Productos(neg);
+
+            formProductos.MdiParent = this;
+            formProductos.ControlBox = false;
+            formProductos.FormBorderStyle = FormBorderStyle.None;
+
+            formProductos.Show();
         }
     }
 }

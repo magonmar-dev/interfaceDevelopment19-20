@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
@@ -85,8 +86,44 @@ namespace capa_datos
 
             return listaLocalidades;
         }
-        
-        public bool Insertar(int id,string email, string contra, string nom, string ape, 
+
+        // Leer todas las localidades de una provincia
+        public List<Localidad> LeerLocalidades(string provinciaID)
+        {
+            List<Localidad> listaLocalidades = null;
+
+            listaLocalidades = (from localidad in LeerLocalidades().AsParallel()
+                                where localidad.ProvinciaID.Equals(provinciaID)
+                                select localidad).ToList<Localidad>();
+
+            return listaLocalidades;
+        }
+
+        // Leer un usuario de la BD
+        public Usuario GetUsuario(string id)
+        {
+            Usuario usuarios = null;
+            string aux;
+
+            try
+            {
+                HttpResponseMessage response = client.GetAsync("api/usuarios/" + id).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    aux = response.Content.ReadAsStringAsync().Result;
+
+                    usuarios = JsonConvert.DeserializeObject<Usuario>(aux);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + e);
+            }
+
+            return usuarios;
+        }
+
+        public bool InsertarUsuario(int id,string email, string contra, string nom, string ape, 
             string dni, string tel, string calle, string calle2, string cod, string pueID, 
             string proID, string nac)
         {
@@ -108,6 +145,91 @@ namespace capa_datos
             }
 
             return true;
+        }
+
+        public bool ModificarUsuario(int id, string email, string contra, string nom, string ape,
+            string dni, string tel, string calle, string calle2, string cod, string pueID,
+            string proID, string nac)
+        {
+            try
+            {
+                Usuario usu = new Usuario(id, email, contra, nom, ape, dni, tel, calle, calle2, cod, pueID, proID, nac);
+                HttpResponseMessage response = client.PutAsJsonAsync($"api/usuarios/{id}", usu).Result;
+
+                if (response.IsSuccessStatusCode)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + e);
+            }
+
+            return true;
+        }
+
+        public bool EliminarUsuario(int id)
+        {
+            try
+            {
+                HttpResponseMessage response = client.DeleteAsync($"api/usuarios/{id}").Result;
+
+                if (response.IsSuccessStatusCode)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + e);
+            }
+
+            return true;
+        }
+
+        public List<Articulo> LeerProductos()
+        {
+            List<Articulo> listaProductos = null;
+            string aux;
+
+            try
+            {
+                HttpResponseMessage response = client.GetAsync("api/Articulos").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    aux = response.Content.ReadAsStringAsync().Result;
+                    listaProductos = JsonConvert.DeserializeObject<List<Articulo>>(aux);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + e);
+            }
+
+            return listaProductos;
+        }
+
+        public List<Pedido> LeerPedidos()
+        {
+            List<Pedido> listaPedidos = null;
+            string aux;
+
+            try
+            {
+                HttpResponseMessage response = client.GetAsync("api/Pedidos").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    aux = response.Content.ReadAsStringAsync().Result;
+                    listaPedidos = JsonConvert.DeserializeObject<List<Pedido>>(aux);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + e);
+            }
+
+            return listaPedidos;
         }
     }
 }

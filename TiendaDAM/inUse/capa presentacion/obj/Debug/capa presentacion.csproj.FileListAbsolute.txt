@@ -116,3 +116,87 @@ D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa presentacion
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa presentacion\bin\Debug\System.Net.Http.Formatting.xml
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa presentacion\bin\Debug\capa datos.dll.config
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 1ev\TiendaDAM\capa presentacion\bin\Debug\capa entidades.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Proyecto1ev.exe.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Proyecto1ev.exe
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Proyecto1ev.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\capa entidades.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\capa negocio.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Newtonsoft.Json.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\System.Net.Http.Formatting.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\capa datos.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\EnvDTE.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\stdole.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Microsoft.MSXML.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\capa entidades.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\capa entidades.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\capa negocio.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\capa negocio.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\Newtonsoft.Json.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\System.Net.Http.Formatting.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\capa datos.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\capa datos.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\capa presentacion.csprojAssemblyReference.cache
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\capa_presentacion.Login.resources
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\Proyecto1ev.Properties.Resources.resources
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\capa_presentacion.FormPrincipal.resources
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\capa_presentacion.Usuarios.resources
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\capa presentacion.csproj.GenerateResource.cache
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\capa presentacion.csproj.CopyComplete
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\Proyecto1ev.exe
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\Proyecto1ev.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\capa_presentacion.Productos.resources

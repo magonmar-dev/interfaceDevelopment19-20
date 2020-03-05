@@ -13642,11 +13642,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DAM\\2º DAM\\Desarrollo de Interfaces\\Proyecto 1ev\\TiendaDAM\\API_Tienda\\API_Tienda.csproj",
+      "projectUniqueName": "D:\\DAM\\2º DAM\\Desarrollo de Interfaces\\Proyecto Windows Forms\\TiendaDAM\\API_Tienda\\API_Tienda.csproj",
       "projectName": "API_Tienda",
-      "projectPath": "D:\\DAM\\2º DAM\\Desarrollo de Interfaces\\Proyecto 1ev\\TiendaDAM\\API_Tienda\\API_Tienda.csproj",
+      "projectPath": "D:\\DAM\\2º DAM\\Desarrollo de Interfaces\\Proyecto Windows Forms\\TiendaDAM\\API_Tienda\\API_Tienda.csproj",
       "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-      "outputPath": "D:\\DAM\\2º DAM\\Desarrollo de Interfaces\\Proyecto 1ev\\TiendaDAM\\API_Tienda\\obj\\",
+      "outputPath": "D:\\DAM\\2º DAM\\Desarrollo de Interfaces\\Proyecto Windows Forms\\TiendaDAM\\API_Tienda\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13720,7 +13720,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
