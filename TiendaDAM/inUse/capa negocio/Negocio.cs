@@ -14,6 +14,7 @@ namespace capa_negocio
         private List<Provincia> listaProvincias;
         private List<Localidad> listaLocalidades;
         private List<Articulo> listaProductos;
+        private List<TipoArticulo> listaTipos;
         private List<Pedido> listaPedidos;
 
         public Negocio()
@@ -23,6 +24,7 @@ namespace capa_negocio
             listaProvincias = bd.LeerProvincias();
             listaLocalidades = bd.LeerLocalidades();
             listaProductos = bd.LeerProductos();
+            listaTipos = bd.LeerTiposArticulo();
             listaPedidos = bd.LeerPedidos();
         }
 
@@ -42,7 +44,8 @@ namespace capa_negocio
             return bd.LeerLocalidades(provinciaID);
         }
 
-        public List<Articulo> GetProductos() { return bd.LeerProductos(); }
+        public List<Articulo> GetProductos() { return listaProductos; }
+        public List<TipoArticulo> GetTiposArticulo() { return listaTipos; }
         public List<Pedido> GetPedidos() { return listaPedidos; }
 
         public bool Validar(string us, string ps)

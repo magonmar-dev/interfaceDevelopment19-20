@@ -46,7 +46,7 @@
             this.groupBox2.Controls.Add(this.txbTipoB);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
-            this.groupBox2.Location = new System.Drawing.Point(725, 27);
+            this.groupBox2.Location = new System.Drawing.Point(759, 30);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(466, 113);
             this.groupBox2.TabIndex = 28;
@@ -73,6 +73,7 @@
             this.txbNomB.Name = "txbNomB";
             this.txbNomB.Size = new System.Drawing.Size(239, 24);
             this.txbNomB.TabIndex = 17;
+            this.txbNomB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNomB_KeyPress);
             // 
             // label14
             // 
@@ -94,6 +95,7 @@
             this.txbTipoB.Name = "txbTipoB";
             this.txbTipoB.Size = new System.Drawing.Size(239, 24);
             this.txbTipoB.TabIndex = 18;
+            this.txbTipoB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbTipoB_KeyPress);
             // 
             // dataGridView
             // 
@@ -108,14 +110,14 @@
             this.dataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dataGridView.Location = new System.Drawing.Point(23, 12);
+            this.dataGridView.Location = new System.Drawing.Point(20, 12);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView.RowHeadersWidth = 25;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(647, 754);
+            this.dataGridView.Size = new System.Drawing.Size(715, 754);
             this.dataGridView.StandardTab = true;
             this.dataGridView.TabIndex = 29;
             // 

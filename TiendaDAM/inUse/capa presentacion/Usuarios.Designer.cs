@@ -88,14 +88,14 @@
             this.dataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dataGridView.Location = new System.Drawing.Point(23, 12);
+            this.dataGridView.Location = new System.Drawing.Point(20, 12);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView.RowHeadersWidth = 25;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(716, 754);
+            this.dataGridView.Size = new System.Drawing.Size(710, 754);
             this.dataGridView.StandardTab = true;
             this.dataGridView.TabIndex = 0;
             this.dataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_RowHeaderMouseClick);

@@ -28,7 +28,7 @@ namespace capa_datos
 
             try
             {
-                HttpResponseMessage response = client.GetAsync("api/Usuarios").Result;
+                HttpResponseMessage response = client.GetAsync("api/usuarios").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     aux = response.Content.ReadAsStringAsync().Result;
@@ -50,7 +50,7 @@ namespace capa_datos
 
             try
             {
-                HttpResponseMessage response = client.GetAsync("api/Provincias").Result;
+                HttpResponseMessage response = client.GetAsync("api/provincias").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     aux = response.Content.ReadAsStringAsync().Result;
@@ -72,7 +72,7 @@ namespace capa_datos
 
             try
             {
-                HttpResponseMessage response = client.GetAsync("api/Localidades").Result;
+                HttpResponseMessage response = client.GetAsync("api/localidades").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     aux = response.Content.ReadAsStringAsync().Result;
@@ -195,7 +195,7 @@ namespace capa_datos
 
             try
             {
-                HttpResponseMessage response = client.GetAsync("api/Articulos").Result;
+                HttpResponseMessage response = client.GetAsync("api/articulos").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     aux = response.Content.ReadAsStringAsync().Result;
@@ -210,6 +210,28 @@ namespace capa_datos
             return listaProductos;
         }
 
+        public List<TipoArticulo> LeerTiposArticulo()
+        {
+            List<TipoArticulo> listaTipos = null;
+            string aux;
+
+            try
+            {
+                HttpResponseMessage response = client.GetAsync("api/tipoArticulos").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    aux = response.Content.ReadAsStringAsync().Result;
+                    listaTipos = JsonConvert.DeserializeObject<List<TipoArticulo>>(aux);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + e);
+            }
+
+            return listaTipos;
+        }
+
         public List<Pedido> LeerPedidos()
         {
             List<Pedido> listaPedidos = null;
@@ -217,7 +239,7 @@ namespace capa_datos
 
             try
             {
-                HttpResponseMessage response = client.GetAsync("api/Pedidos").Result;
+                HttpResponseMessage response = client.GetAsync("api/pedidos").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     aux = response.Content.ReadAsStringAsync().Result;

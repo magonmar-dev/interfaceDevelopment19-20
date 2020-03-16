@@ -19,6 +19,7 @@ namespace capa_presentacion
         private DataTable dt;
 
         private List<Articulo> listaProductos;
+        private List<TipoArticulo> listaTipos;
 
         public Productos(Negocio neg)
         {
@@ -31,7 +32,7 @@ namespace capa_presentacion
             dt.Columns.Add(new DataColumn("Nombre", typeof(string)));
             dt.Columns.Add(new DataColumn("PVP", typeof(string)));
             dt.Columns.Add(new DataColumn("Marca", typeof(string)));
-
+            dt.Columns.Add(new DataColumn("Tipo", typeof(string)));
 
             vista = new DataView(dt);
             dataGridView.DataSource = vista;
@@ -54,11 +55,55 @@ namespace capa_presentacion
                 row["Nombre"] = listaProductos[i].Nombre;
                 row["PVP"] = listaProductos[i].Pvp.ToString();
                 row["Marca"] = listaProductos[i].MarcaID;
+                row["Tipo"] = leer_tipo(listaProductos[i].TipoArticuloID);
                 dt.Rows.Add(row);
                 row.AcceptChanges();
 
                 i++;
             }
+        }
+
+        public string leer_tipo(int? id)
+        {
+            listaTipos = neg.GetTiposArticulo();
+
+            string tipo = "";
+
+            int i = 0;
+
+            while ( i < listaTipos.Count)
+            {
+                if (listaTipos[i].TipoArticuloID == id)
+                    tipo = listaTipos[i].Descripcion;
+
+                i++;
+            }
+
+            return tipo;
+        }
+
+        private void txbNomB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txbTipoB.Clear();
+
+            string aux = txbNomB.Text;
+
+            if (aux == "")
+                aux = "*";
+
+            vista.RowFilter = "Nombre LIKE '" + aux + "*'";
+        }
+
+        private void txbTipoB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txbNomB.Clear();
+
+            string aux = txbTipoB.Text;
+
+            if (aux == "")
+                aux = "*";
+
+            vista.RowFilter = "Tipo LIKE '" + aux + "*'";
         }
     }
 }

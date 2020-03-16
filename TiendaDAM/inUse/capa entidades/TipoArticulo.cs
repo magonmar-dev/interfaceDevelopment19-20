@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class TipoArticulo
+    public class TipoArticulo
     {
         public int TipoArticuloID { get; set; }
         public string Descripcion { get; set; }
