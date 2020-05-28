@@ -200,3 +200,4 @@ D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa pr
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\Proyecto1ev.exe
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\Proyecto1ev.pdb
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\capa_presentacion.Productos.resources
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto Windows Forms\TiendaDAM\capa presentacion\obj\Debug\capa_presentacion.Pedidos.resources

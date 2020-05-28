@@ -1,5 +1,6 @@
 ﻿using capa_negocio;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -9,7 +10,8 @@ namespace capa_presentacion
    {
         private Negocio neg;
         private Usuarios formUsuarios;
-        private Productos formProductos;        
+        private Productos formProductos;
+        private Pedidos formPedidos;
 
         DateTime timer;
         double seconds = 0;
@@ -80,7 +82,7 @@ namespace capa_presentacion
             this.IsMdiContainer = false;
             this.IsMdiContainer = true;
 
-            formUsuarios = new Usuarios(neg);
+            formUsuarios = new Usuarios(neg, lblStatus);
 
             formUsuarios.MdiParent = this;
             formUsuarios.ControlBox = false;
@@ -112,13 +114,29 @@ namespace capa_presentacion
             this.IsMdiContainer = false;
             this.IsMdiContainer = true;
 
-            formProductos = new Productos(neg);
+            formProductos = new Productos(neg, lblStatus);
 
             formProductos.MdiParent = this;
             formProductos.ControlBox = false;
             formProductos.FormBorderStyle = FormBorderStyle.None;
 
             formProductos.Show();
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            cierra_formularios();
+
+            this.IsMdiContainer = false;
+            this.IsMdiContainer = true;
+
+            formPedidos = new Pedidos(neg, lblStatus);
+
+            formPedidos.MdiParent = this;
+            formPedidos.ControlBox = false;
+            formPedidos.FormBorderStyle = FormBorderStyle.None;
+
+            formPedidos.Show();
         }
     }
 }

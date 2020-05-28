@@ -61,6 +61,7 @@
             this.btnMod = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnResetFilters = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.txbDniB = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -79,7 +80,7 @@
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.AllowUserToOrderColumns = true;
+            this.dataGridView.AllowUserToResizeColumns = false;
             this.dataGridView.AllowUserToResizeRows = false;
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -94,11 +95,13 @@
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView.RowHeadersWidth = 25;
+            this.dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(710, 754);
             this.dataGridView.StandardTab = true;
             this.dataGridView.TabIndex = 0;
-            this.dataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_RowHeaderMouseClick);
+            this.dataGridView.Click += new System.EventHandler(this.dataGridView_Click);
             // 
             // txbEmail
             // 
@@ -283,12 +286,13 @@
             // 
             this.dtpNac.CalendarTitleBackColor = System.Drawing.Color.Aqua;
             this.dtpNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNac.Location = new System.Drawing.Point(204, 404);
-            this.dtpNac.MaxDate = new System.DateTime(2019, 11, 12, 0, 0, 0, 0);
+            this.dtpNac.MaxDate = new System.DateTime(2020, 5, 26, 0, 0, 0, 0);
             this.dtpNac.Name = "dtpNac";
             this.dtpNac.Size = new System.Drawing.Size(239, 24);
             this.dtpNac.TabIndex = 13;
-            this.dtpNac.Value = new System.DateTime(2019, 11, 12, 0, 0, 0, 0);
+            this.dtpNac.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             // 
             // groupBox1
             // 
@@ -418,7 +422,7 @@
             this.btnIns.Location = new System.Drawing.Point(760, 702);
             this.btnIns.Name = "btnIns";
             this.btnIns.Size = new System.Drawing.Size(140, 50);
-            this.btnIns.TabIndex = 18;
+            this.btnIns.TabIndex = 19;
             this.btnIns.Text = "INSERTAR";
             this.btnIns.UseVisualStyleBackColor = false;
             this.btnIns.Click += new System.EventHandler(this.btnIns_Click);
@@ -431,7 +435,7 @@
             this.btnEli.Location = new System.Drawing.Point(1086, 702);
             this.btnEli.Name = "btnEli";
             this.btnEli.Size = new System.Drawing.Size(140, 50);
-            this.btnEli.TabIndex = 20;
+            this.btnEli.TabIndex = 21;
             this.btnEli.Text = "ELIMINAR";
             this.btnEli.UseVisualStyleBackColor = false;
             this.btnEli.Click += new System.EventHandler(this.btnEli_Click);
@@ -444,7 +448,7 @@
             this.btnMod.Location = new System.Drawing.Point(919, 702);
             this.btnMod.Name = "btnMod";
             this.btnMod.Size = new System.Drawing.Size(145, 50);
-            this.btnMod.TabIndex = 19;
+            this.btnMod.TabIndex = 20;
             this.btnMod.Text = "MODIFICAR";
             this.btnMod.UseVisualStyleBackColor = false;
             this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
@@ -455,6 +459,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnResetFilters);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.txbDniB);
             this.groupBox2.Controls.Add(this.label15);
@@ -465,12 +470,26 @@
             this.groupBox2.Controls.Add(this.txbApeB);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
-            this.groupBox2.Location = new System.Drawing.Point(760, 497);
+            this.groupBox2.Location = new System.Drawing.Point(760, 494);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(466, 173);
+            this.groupBox2.Size = new System.Drawing.Size(466, 177);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "BUSCAR USUARIO";
+            // 
+            // btnResetFilters
+            // 
+            this.btnResetFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
+            this.btnResetFilters.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnResetFilters.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetFilters.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnResetFilters.Location = new System.Drawing.Point(6, 119);
+            this.btnResetFilters.Name = "btnResetFilters";
+            this.btnResetFilters.Size = new System.Drawing.Size(91, 52);
+            this.btnResetFilters.TabIndex = 18;
+            this.btnResetFilters.Text = "BORRAR FILTROS";
+            this.btnResetFilters.UseVisualStyleBackColor = false;
+            this.btnResetFilters.Click += new System.EventHandler(this.btnResetFilters_Click);
             // 
             // label16
             // 
@@ -538,7 +557,7 @@
             this.txbNomB.Name = "txbNomB";
             this.txbNomB.Size = new System.Drawing.Size(239, 24);
             this.txbNomB.TabIndex = 14;
-            this.txbNomB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNomB_KeyPress);
+            this.txbNomB.TextChanged += new System.EventHandler(this.txbNomB_TextChanged);
             // 
             // label14
             // 
@@ -560,7 +579,7 @@
             this.txbApeB.Name = "txbApeB";
             this.txbApeB.Size = new System.Drawing.Size(239, 24);
             this.txbApeB.TabIndex = 15;
-            this.txbApeB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbApeB_KeyPress);
+            this.txbApeB.TextChanged += new System.EventHandler(this.txbApeB_TextChanged);
             // 
             // Usuarios
             // 
@@ -629,5 +648,6 @@
         private System.Windows.Forms.TextBox txbNomB;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txbApeB;
+        private System.Windows.Forms.Button btnResetFilters;
     }
 }

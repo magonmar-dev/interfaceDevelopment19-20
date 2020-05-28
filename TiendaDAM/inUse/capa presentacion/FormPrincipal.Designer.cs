@@ -31,19 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.btnArchivo = new System.Windows.Forms.ToolStripDropDownButton();
             this.btnSalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnUsuarios = new System.Windows.Forms.ToolStripDropDownButton();
-            this.btnProductos = new System.Windows.Forms.ToolStripDropDownButton();
-            this.btnPedidos = new System.Windows.Forms.ToolStripDropDownButton();
-            this.btnNuevo = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnConsultMod = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnEliminarPed = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnEstadisticas = new System.Windows.Forms.ToolStripLabel();
-            this.btnInformes = new System.Windows.Forms.ToolStripDropDownButton();
-            this.btnFactura = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnStock = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAcerca = new System.Windows.Forms.ToolStripLabel();
+            this.btnUsuarios = new System.Windows.Forms.ToolStripButton();
+            this.btnProductos = new System.Windows.Forms.ToolStripButton();
+            this.btnPedidos = new System.Windows.Forms.ToolStripButton();
+            this.btnEstadisticas = new System.Windows.Forms.ToolStripButton();
+            this.btnInformes = new System.Windows.Forms.ToolStripButton();
+            this.btnAcerca = new System.Windows.Forms.ToolStripButton();
             this.lblUsuario = new System.Windows.Forms.ToolStripLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -67,7 +62,7 @@
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(23)))), ((int)(((byte)(31)))));
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
+            this.btnArchivo,
             this.btnUsuarios,
             this.btnProductos,
             this.btnPedidos,
@@ -78,27 +73,29 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 13, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1262, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(1262, 31);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripDropDownButton1
+            // btnArchivo
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnSalir});
-            this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(73, 24);
-            this.toolStripDropDownButton1.Text = "Archivo";
+            this.btnArchivo.ForeColor = System.Drawing.Color.White;
+            this.btnArchivo.Image = ((System.Drawing.Image)(resources.GetObject("btnArchivo.Image")));
+            this.btnArchivo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnArchivo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnArchivo.Name = "btnArchivo";
+            this.btnArchivo.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnArchivo.Size = new System.Drawing.Size(83, 27);
+            this.btnArchivo.Text = "Archivo";
+            this.btnArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // btnSalir
             // 
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(224, 26);
+            this.btnSalir.Size = new System.Drawing.Size(121, 26);
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -110,7 +107,8 @@
             this.btnUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(79, 24);
+            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnUsuarios.Size = new System.Drawing.Size(79, 27);
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
@@ -122,85 +120,52 @@
             this.btnProductos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(89, 24);
+            this.btnProductos.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnProductos.Size = new System.Drawing.Size(89, 27);
             this.btnProductos.Text = "Productos";
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnPedidos
             // 
             this.btnPedidos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnPedidos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNuevo,
-            this.btnConsultMod,
-            this.btnEliminarPed});
             this.btnPedidos.ForeColor = System.Drawing.Color.White;
             this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
             this.btnPedidos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPedidos.Margin = new System.Windows.Forms.Padding(2);
             this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(75, 24);
+            this.btnPedidos.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnPedidos.Size = new System.Drawing.Size(75, 27);
             this.btnPedidos.Text = "Pedidos";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(251, 26);
-            this.btnNuevo.Text = "Nuevo";
-            // 
-            // btnConsultMod
-            // 
-            this.btnConsultMod.Name = "btnConsultMod";
-            this.btnConsultMod.Size = new System.Drawing.Size(251, 26);
-            this.btnConsultMod.Text = "Consulta y modificación";
-            // 
-            // btnEliminarPed
-            // 
-            this.btnEliminarPed.Name = "btnEliminarPed";
-            this.btnEliminarPed.Size = new System.Drawing.Size(251, 26);
-            this.btnEliminarPed.Text = "Eliminar";
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // btnEstadisticas
             // 
-            this.btnEstadisticas.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
             this.btnEstadisticas.ForeColor = System.Drawing.Color.White;
             this.btnEstadisticas.Margin = new System.Windows.Forms.Padding(2);
             this.btnEstadisticas.Name = "btnEstadisticas";
-            this.btnEstadisticas.Size = new System.Drawing.Size(85, 24);
+            this.btnEstadisticas.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnEstadisticas.Size = new System.Drawing.Size(99, 27);
             this.btnEstadisticas.Text = "Estadísticas";
             // 
             // btnInformes
             // 
             this.btnInformes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnInformes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnFactura,
-            this.btnStock});
             this.btnInformes.ForeColor = System.Drawing.Color.White;
             this.btnInformes.Image = ((System.Drawing.Image)(resources.GetObject("btnInformes.Image")));
             this.btnInformes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInformes.Margin = new System.Windows.Forms.Padding(2);
             this.btnInformes.Name = "btnInformes";
-            this.btnInformes.Size = new System.Drawing.Size(81, 24);
+            this.btnInformes.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnInformes.Size = new System.Drawing.Size(81, 27);
             this.btnInformes.Text = "Informes";
-            // 
-            // btnFactura
-            // 
-            this.btnFactura.Name = "btnFactura";
-            this.btnFactura.Size = new System.Drawing.Size(224, 26);
-            this.btnFactura.Text = "Factura";
-            // 
-            // btnStock
-            // 
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(224, 26);
-            this.btnStock.Text = "Stock";
             // 
             // btnAcerca
             // 
-            this.btnAcerca.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
             this.btnAcerca.ForeColor = System.Drawing.Color.White;
             this.btnAcerca.Margin = new System.Windows.Forms.Padding(2);
             this.btnAcerca.Name = "btnAcerca";
-            this.btnAcerca.Size = new System.Drawing.Size(84, 24);
+            this.btnAcerca.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btnAcerca.Size = new System.Drawing.Size(98, 27);
             this.btnAcerca.Text = "Acerca de...";
             // 
             // lblUsuario
@@ -240,9 +205,12 @@
             // lblStatus
             // 
             this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(10, 4, 0, 2);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(1107, 20);
+            this.lblStatus.Size = new System.Drawing.Size(1097, 20);
             this.lblStatus.Spring = true;
+            this.lblStatus.Text = "AYUDA: Ctrl + Click para eliminar selección de la tabla";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblHora
             // 
@@ -340,19 +308,13 @@
 
         #endregion
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem btnSalir;
-        private System.Windows.Forms.ToolStripDropDownButton btnUsuarios;
-        private System.Windows.Forms.ToolStripDropDownButton btnProductos;
-        private System.Windows.Forms.ToolStripDropDownButton btnPedidos;
-        private System.Windows.Forms.ToolStripMenuItem btnNuevo;
-        private System.Windows.Forms.ToolStripMenuItem btnConsultMod;
-        private System.Windows.Forms.ToolStripMenuItem btnEliminarPed;
-        private System.Windows.Forms.ToolStripLabel btnEstadisticas;
-        private System.Windows.Forms.ToolStripDropDownButton btnInformes;
-        private System.Windows.Forms.ToolStripMenuItem btnFactura;
-        private System.Windows.Forms.ToolStripMenuItem btnStock;
-        private System.Windows.Forms.ToolStripLabel btnAcerca;
+        private System.Windows.Forms.ToolStripDropDownButton btnArchivo;
+        private System.Windows.Forms.ToolStripButton btnUsuarios;
+        private System.Windows.Forms.ToolStripButton btnProductos;
+        private System.Windows.Forms.ToolStripButton btnPedidos;
+        private System.Windows.Forms.ToolStripButton btnEstadisticas;
+        private System.Windows.Forms.ToolStripButton btnInformes;
+        private System.Windows.Forms.ToolStripButton btnAcerca;
         private System.Windows.Forms.ToolStripLabel lblUsuario;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
@@ -366,5 +328,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnMostrar;
         private System.Windows.Forms.ToolStripMenuItem btnOcultar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem btnSalir;
     }
 }
