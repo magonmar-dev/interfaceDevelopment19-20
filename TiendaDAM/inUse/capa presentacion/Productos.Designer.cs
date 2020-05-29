@@ -36,6 +36,21 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panelMemoria = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panelObjetivo = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txbEspeciales = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txbApertura = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txbFocal = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txbMontura = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txbTipoObj = new System.Windows.Forms.TextBox();
+            this.txbTipoMem = new System.Windows.Forms.TextBox();
+            this.cbTipo = new System.Windows.Forms.ComboBox();
             this.panelCamara = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -51,10 +66,6 @@
             this.txbSensor = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txbResolCam = new System.Windows.Forms.TextBox();
-            this.panelMemoria = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txbTipoMem = new System.Windows.Forms.TextBox();
-            this.cbTipo = new System.Windows.Forms.ComboBox();
             this.panelTV = new System.Windows.Forms.Panel();
             this.ckbTDT = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -67,17 +78,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txbPanel = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panelObjetivo = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txbEspeciales = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txbApertura = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txbFocal = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txbMontura = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txbTipoObj = new System.Windows.Forms.TextBox();
             this.txbEspec = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbMarca = new System.Windows.Forms.ComboBox();
@@ -90,10 +90,10 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.panelCamara.SuspendLayout();
             this.panelMemoria.SuspendLayout();
-            this.panelTV.SuspendLayout();
             this.panelObjetivo.SuspendLayout();
+            this.panelCamara.SuspendLayout();
+            this.panelTV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPvp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +106,7 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
-            this.groupBox2.Location = new System.Drawing.Point(20, 12);
+            this.groupBox2.Location = new System.Drawing.Point(12, 6);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(717, 90);
             this.groupBox2.TabIndex = 28;
@@ -188,7 +188,7 @@
             this.dataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dataGridView.Location = new System.Drawing.Point(20, 120);
+            this.dataGridView.Location = new System.Drawing.Point(12, 112);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
@@ -205,9 +205,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.panelMemoria);
+            this.groupBox1.Controls.Add(this.panelCamara);
             this.groupBox1.Controls.Add(this.cbTipo);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.panelObjetivo);
+            this.groupBox1.Controls.Add(this.panelTV);
             this.groupBox1.Controls.Add(this.txbEspec);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cbMarca);
@@ -218,12 +220,189 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(93)))), ((int)(((byte)(103)))));
-            this.groupBox1.Location = new System.Drawing.Point(760, 12);
+            this.groupBox1.Location = new System.Drawing.Point(754, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(467, 669);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL PRODUCTO";
+            // 
+            // panelMemoria
+            // 
+            this.panelMemoria.Controls.Add(this.panelObjetivo);
+            this.panelMemoria.Controls.Add(this.label5);
+            this.panelMemoria.Controls.Add(this.txbTipoMem);
+            this.panelMemoria.Location = new System.Drawing.Point(6, 363);
+            this.panelMemoria.Name = "panelMemoria";
+            this.panelMemoria.Size = new System.Drawing.Size(455, 62);
+            this.panelMemoria.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(105, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 20);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Tipo";
+            // 
+            // panelObjetivo
+            // 
+            this.panelObjetivo.Controls.Add(this.label11);
+            this.panelObjetivo.Controls.Add(this.txbEspeciales);
+            this.panelObjetivo.Controls.Add(this.label15);
+            this.panelObjetivo.Controls.Add(this.txbApertura);
+            this.panelObjetivo.Controls.Add(this.label16);
+            this.panelObjetivo.Controls.Add(this.txbFocal);
+            this.panelObjetivo.Controls.Add(this.label17);
+            this.panelObjetivo.Controls.Add(this.txbMontura);
+            this.panelObjetivo.Controls.Add(this.label18);
+            this.panelObjetivo.Controls.Add(this.txbTipoObj);
+            this.panelObjetivo.Location = new System.Drawing.Point(0, 0);
+            this.panelObjetivo.Name = "panelObjetivo";
+            this.panelObjetivo.Size = new System.Drawing.Size(454, 221);
+            this.panelObjetivo.TabIndex = 43;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(55, 182);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(91, 20);
+            this.label11.TabIndex = 42;
+            this.label11.Text = "Especiales";
+            // 
+            // txbEspeciales
+            // 
+            this.txbEspeciales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbEspeciales.Enabled = false;
+            this.txbEspeciales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txbEspeciales.Location = new System.Drawing.Point(162, 181);
+            this.txbEspeciales.MaxLength = 35;
+            this.txbEspeciales.Name = "txbEspeciales";
+            this.txbEspeciales.Size = new System.Drawing.Size(274, 26);
+            this.txbEspeciales.TabIndex = 41;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(73, 143);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 20);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Apertura";
+            // 
+            // txbApertura
+            // 
+            this.txbApertura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbApertura.Enabled = false;
+            this.txbApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txbApertura.Location = new System.Drawing.Point(163, 142);
+            this.txbApertura.MaxLength = 35;
+            this.txbApertura.Name = "txbApertura";
+            this.txbApertura.Size = new System.Drawing.Size(274, 26);
+            this.txbApertura.TabIndex = 39;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(96, 103);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(50, 20);
+            this.label16.TabIndex = 38;
+            this.label16.Text = "Focal";
+            // 
+            // txbFocal
+            // 
+            this.txbFocal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbFocal.Enabled = false;
+            this.txbFocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txbFocal.Location = new System.Drawing.Point(163, 102);
+            this.txbFocal.MaxLength = 35;
+            this.txbFocal.Name = "txbFocal";
+            this.txbFocal.Size = new System.Drawing.Size(274, 26);
+            this.txbFocal.TabIndex = 37;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(76, 61);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 20);
+            this.label17.TabIndex = 36;
+            this.label17.Text = "Montura";
+            // 
+            // txbMontura
+            // 
+            this.txbMontura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbMontura.Enabled = false;
+            this.txbMontura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txbMontura.Location = new System.Drawing.Point(163, 60);
+            this.txbMontura.MaxLength = 35;
+            this.txbMontura.Name = "txbMontura";
+            this.txbMontura.Size = new System.Drawing.Size(274, 26);
+            this.txbMontura.TabIndex = 35;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(105, 19);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 20);
+            this.label18.TabIndex = 34;
+            this.label18.Text = "Tipo";
+            // 
+            // txbTipoObj
+            // 
+            this.txbTipoObj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbTipoObj.Enabled = false;
+            this.txbTipoObj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txbTipoObj.Location = new System.Drawing.Point(162, 18);
+            this.txbTipoObj.MaxLength = 35;
+            this.txbTipoObj.Name = "txbTipoObj";
+            this.txbTipoObj.Size = new System.Drawing.Size(274, 26);
+            this.txbTipoObj.TabIndex = 33;
+            // 
+            // txbTipoMem
+            // 
+            this.txbTipoMem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbTipoMem.Enabled = false;
+            this.txbTipoMem.Location = new System.Drawing.Point(163, 19);
+            this.txbTipoMem.MaxLength = 35;
+            this.txbTipoMem.Name = "txbTipoMem";
+            this.txbTipoMem.Size = new System.Drawing.Size(274, 24);
+            this.txbTipoMem.TabIndex = 33;
+            // 
+            // cbTipo
+            // 
+            this.cbTipo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipo.Enabled = false;
+            this.cbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbTipo.FormattingEnabled = true;
+            this.cbTipo.ItemHeight = 20;
+            this.cbTipo.Location = new System.Drawing.Point(169, 329);
+            this.cbTipo.Name = "cbTipo";
+            this.cbTipo.Size = new System.Drawing.Size(274, 28);
+            this.cbTipo.TabIndex = 7;
             // 
             // panelCamara
             // 
@@ -241,11 +420,10 @@
             this.panelCamara.Controls.Add(this.txbSensor);
             this.panelCamara.Controls.Add(this.label23);
             this.panelCamara.Controls.Add(this.txbResolCam);
-            this.panelCamara.Location = new System.Drawing.Point(0, 0);
+            this.panelCamara.Location = new System.Drawing.Point(7, 363);
             this.panelCamara.Name = "panelCamara";
             this.panelCamara.Size = new System.Drawing.Size(454, 300);
             this.panelCamara.TabIndex = 44;
-            this.panelCamara.Visible = false;
             // 
             // label19
             // 
@@ -408,55 +586,8 @@
             this.txbResolCam.Size = new System.Drawing.Size(274, 26);
             this.txbResolCam.TabIndex = 33;
             // 
-            // panelMemoria
-            // 
-            this.panelMemoria.Controls.Add(this.panelCamara);
-            this.panelMemoria.Controls.Add(this.label5);
-            this.panelMemoria.Controls.Add(this.txbTipoMem);
-            this.panelMemoria.Location = new System.Drawing.Point(0, 0);
-            this.panelMemoria.Name = "panelMemoria";
-            this.panelMemoria.Size = new System.Drawing.Size(455, 62);
-            this.panelMemoria.TabIndex = 32;
-            this.panelMemoria.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(105, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 20);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Tipo";
-            // 
-            // txbTipoMem
-            // 
-            this.txbTipoMem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbTipoMem.Enabled = false;
-            this.txbTipoMem.Location = new System.Drawing.Point(163, 19);
-            this.txbTipoMem.MaxLength = 35;
-            this.txbTipoMem.Name = "txbTipoMem";
-            this.txbTipoMem.Size = new System.Drawing.Size(274, 24);
-            this.txbTipoMem.TabIndex = 33;
-            // 
-            // cbTipo
-            // 
-            this.cbTipo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTipo.Enabled = false;
-            this.cbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.ItemHeight = 20;
-            this.cbTipo.Location = new System.Drawing.Point(169, 329);
-            this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(274, 28);
-            this.cbTipo.TabIndex = 7;
-            // 
             // panelTV
             // 
-            this.panelTV.Controls.Add(this.panelMemoria);
             this.panelTV.Controls.Add(this.ckbTDT);
             this.panelTV.Controls.Add(this.label10);
             this.panelTV.Controls.Add(this.label9);
@@ -467,11 +598,10 @@
             this.panelTV.Controls.Add(this.txbPantallaTV);
             this.panelTV.Controls.Add(this.label6);
             this.panelTV.Controls.Add(this.txbPanel);
-            this.panelTV.Location = new System.Drawing.Point(0, 0);
+            this.panelTV.Location = new System.Drawing.Point(6, 363);
             this.panelTV.Name = "panelTV";
             this.panelTV.Size = new System.Drawing.Size(454, 221);
             this.panelTV.TabIndex = 35;
-            this.panelTV.Visible = false;
             // 
             // ckbTDT
             // 
@@ -599,140 +729,6 @@
             this.label4.Size = new System.Drawing.Size(124, 20);
             this.label4.TabIndex = 31;
             this.label4.Text = "Tipo de artículo";
-            // 
-            // panelObjetivo
-            // 
-            this.panelObjetivo.Controls.Add(this.label11);
-            this.panelObjetivo.Controls.Add(this.panelTV);
-            this.panelObjetivo.Controls.Add(this.txbEspeciales);
-            this.panelObjetivo.Controls.Add(this.label15);
-            this.panelObjetivo.Controls.Add(this.txbApertura);
-            this.panelObjetivo.Controls.Add(this.label16);
-            this.panelObjetivo.Controls.Add(this.txbFocal);
-            this.panelObjetivo.Controls.Add(this.label17);
-            this.panelObjetivo.Controls.Add(this.txbMontura);
-            this.panelObjetivo.Controls.Add(this.label18);
-            this.panelObjetivo.Controls.Add(this.txbTipoObj);
-            this.panelObjetivo.Location = new System.Drawing.Point(7, 363);
-            this.panelObjetivo.Name = "panelObjetivo";
-            this.panelObjetivo.Size = new System.Drawing.Size(454, 221);
-            this.panelObjetivo.TabIndex = 43;
-            this.panelObjetivo.Visible = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(55, 182);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 20);
-            this.label11.TabIndex = 42;
-            this.label11.Text = "Especiales";
-            // 
-            // txbEspeciales
-            // 
-            this.txbEspeciales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbEspeciales.Enabled = false;
-            this.txbEspeciales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txbEspeciales.Location = new System.Drawing.Point(162, 181);
-            this.txbEspeciales.MaxLength = 35;
-            this.txbEspeciales.Name = "txbEspeciales";
-            this.txbEspeciales.Size = new System.Drawing.Size(274, 26);
-            this.txbEspeciales.TabIndex = 41;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(73, 143);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 20);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Apertura";
-            // 
-            // txbApertura
-            // 
-            this.txbApertura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbApertura.Enabled = false;
-            this.txbApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txbApertura.Location = new System.Drawing.Point(163, 142);
-            this.txbApertura.MaxLength = 35;
-            this.txbApertura.Name = "txbApertura";
-            this.txbApertura.Size = new System.Drawing.Size(274, 26);
-            this.txbApertura.TabIndex = 39;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(96, 103);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(50, 20);
-            this.label16.TabIndex = 38;
-            this.label16.Text = "Focal";
-            // 
-            // txbFocal
-            // 
-            this.txbFocal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbFocal.Enabled = false;
-            this.txbFocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txbFocal.Location = new System.Drawing.Point(163, 102);
-            this.txbFocal.MaxLength = 35;
-            this.txbFocal.Name = "txbFocal";
-            this.txbFocal.Size = new System.Drawing.Size(274, 26);
-            this.txbFocal.TabIndex = 37;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(76, 61);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 20);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "Montura";
-            // 
-            // txbMontura
-            // 
-            this.txbMontura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbMontura.Enabled = false;
-            this.txbMontura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txbMontura.Location = new System.Drawing.Point(163, 60);
-            this.txbMontura.MaxLength = 35;
-            this.txbMontura.Name = "txbMontura";
-            this.txbMontura.Size = new System.Drawing.Size(274, 26);
-            this.txbMontura.TabIndex = 35;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(105, 19);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 20);
-            this.label18.TabIndex = 34;
-            this.label18.Text = "Tipo";
-            // 
-            // txbTipoObj
-            // 
-            this.txbTipoObj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbTipoObj.Enabled = false;
-            this.txbTipoObj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txbTipoObj.Location = new System.Drawing.Point(162, 18);
-            this.txbTipoObj.MaxLength = 35;
-            this.txbTipoObj.Name = "txbTipoObj";
-            this.txbTipoObj.Size = new System.Drawing.Size(274, 26);
-            this.txbTipoObj.TabIndex = 33;
             // 
             // txbEspec
             // 
@@ -868,14 +864,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panelCamara.ResumeLayout(false);
-            this.panelCamara.PerformLayout();
             this.panelMemoria.ResumeLayout(false);
             this.panelMemoria.PerformLayout();
-            this.panelTV.ResumeLayout(false);
-            this.panelTV.PerformLayout();
             this.panelObjetivo.ResumeLayout(false);
             this.panelObjetivo.PerformLayout();
+            this.panelCamara.ResumeLayout(false);
+            this.panelCamara.PerformLayout();
+            this.panelTV.ResumeLayout(false);
+            this.panelTV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPvp)).EndInit();
             this.ResumeLayout(false);
 

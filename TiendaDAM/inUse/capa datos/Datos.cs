@@ -520,6 +520,25 @@ namespace capa_datos
             return true;
         }
 
+        public bool EliminarPedido(string pedidoId)
+        {
+            try
+            {
+                HttpResponseMessage response = client.DeleteAsync("api/pedidos/" + pedidoId).Result;
+
+                if (response.IsSuccessStatusCode)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error " + e);
+            }
+
+            return true;
+        }
+
         public bool InsertarLinped(string pedidoId, string linea, string productoId,
             int importe, int cantidad)
         {

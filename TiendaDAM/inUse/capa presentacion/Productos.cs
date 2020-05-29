@@ -56,6 +56,8 @@ namespace capa_presentacion
             cbMarca.SelectedIndex = 0;
 
             leer_productos();
+
+            OcultarPaneles();
         }
 
         private void leer_productos()
@@ -154,17 +156,22 @@ namespace capa_presentacion
         private void txbNomB_TextChanged(object sender, EventArgs e)
         {
             buscarProducto();
+            selectedProduct = null;
         }
 
         private void cbTipoB_SelectedIndexChanged(object sender, EventArgs e)
         {
             buscarProducto();
+            selectedProduct = null;
         }
 
         private void btnResetFilters_Click(object sender, EventArgs e)
         {
             txbNomB.Clear();
             cbTipoB.SelectedIndex = 0;
+            vaciarCampos();
+            selectedProduct = null;
+            OcultarPaneles();
         }
 
         private void vaciarCampos()
@@ -230,41 +237,78 @@ namespace capa_presentacion
                 if (selectedProduct.TipoArticuloID != null)
                     cbTipo.SelectedItem = obtenerTipo(selectedProduct.TipoArticuloID);
 
-                OcultarPaneles();
-
                 switch (selectedProduct.TipoArticuloID)
                 {
                     case "1": // TV
+                        txbPanel.Clear();
+                        txbPantallaTV.Clear();
+                        txbResolTV.Clear();
+                        txbHD.Clear();
+                        ckbTDT.Checked = false;
                         Tv tv = obtenerTV(id);
-                        txbPanel.Text = tv.Panel;
-                        txbPantallaTV.Text = tv.Pantalla;
-                        txbResolTV.Text = tv.Resolucion;
-                        txbHD.Text = tv.HDReadyFullHD;
+                        if (tv.Panel != null)
+                            txbPanel.Text = tv.Panel;
+                        if (tv.Pantalla != null)
+                            txbPantallaTV.Text = tv.Pantalla;
+                        if (tv.Resolucion != null) 
+                            txbResolTV.Text = tv.Resolucion;
+                        if (tv.HDReadyFullHD != null) 
+                            txbHD.Text = tv.HDReadyFullHD;
                         ckbTDT.Checked = tv.Tdt;
+                        OcultarPaneles();
                         panelTV.Visible = true;
                         break;
                     case "2": // Memoria
-                        txbTipoMem.Text = obtenerMemoria(id).Tipo;
+                        txbTipoMem.Clear();
+                        if (obtenerMemoria(id).Tipo != null)
+                            txbTipoMem.Text = obtenerMemoria(id).Tipo;
+                        OcultarPaneles();
                         panelMemoria.Visible = true;
                         break;
                     case "3": // Cámara
+                        txbResolCam.Clear();
+                        txbSensor.Clear();
+                        txbTipoCam.Clear();
+                        txbFactor.Clear();
+                        txbObjetivo.Clear();
+                        txbPantallaCam.Clear();
+                        txbZoom.Clear();
                         Camara cam = obtenerCamara(id);
-                        txbResolCam.Text = cam.Resolucion;
-                        txbSensor.Text = cam.Sensor;
-                        txbTipoCam.Text = cam.Tipo;
-                        txbFactor.Text = cam.Factor;
-                        txbObjetivo.Text = cam.Objetivo;
-                        txbPantallaCam.Text = cam.Pantalla;
-                        txbZoom.Text = cam.Zoom;
+                        if(cam.Resolucion != null)
+                            txbResolCam.Text = cam.Resolucion;
+                        if (cam.Sensor != null) 
+                            txbSensor.Text = cam.Sensor;
+                        if (cam.Tipo != null) 
+                            txbTipoCam.Text = cam.Tipo;
+                        if (cam.Factor != null) 
+                            txbFactor.Text = cam.Factor;
+                        if (cam.Objetivo != null) 
+                            txbObjetivo.Text = cam.Objetivo;
+                        if (cam.Pantalla != null) 
+                            txbPantallaCam.Text = cam.Pantalla;
+                        if (cam.Zoom != null) 
+                            txbZoom.Text = cam.Zoom;
+                        OcultarPaneles();
                         panelCamara.Visible = true;
                         break;
                     case "4": // Objetivo
+                        txbTipoObj.Clear();
+                        txbMontura.Clear();
+                        txbFocal.Clear();
+                        txbApertura.Clear();
+                        txbEspeciales.Clear();
                         Objetivo obj = obtenerObjetivo(id);
-                        txbTipoObj.Text = obj.Tipo;
-                        txbMontura.Text = obj.Montura;
-                        txbFocal.Text = obj.Focal;
-                        txbApertura.Text = obj.Apertura;
-                        txbEspeciales.Text = obj.Especiales;
+                        if (obj.Tipo != null)
+                            txbTipoObj.Text = obj.Tipo;
+                        if (obj.Montura != null) 
+                            txbMontura.Text = obj.Montura;
+                        if (obj.Focal != null) 
+                            txbFocal.Text = obj.Focal;
+                        if (obj.Apertura != null) 
+                            txbApertura.Text = obj.Apertura;
+                        if (obj.Especiales != null) 
+                            txbEspeciales.Text = obj.Especiales;
+                        OcultarPaneles();
                         panelObjetivo.Visible = true;
                         break;
                     default: break;

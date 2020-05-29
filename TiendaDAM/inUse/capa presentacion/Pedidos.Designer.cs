@@ -60,6 +60,7 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnEli = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -176,6 +177,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnEli);
             this.groupBox1.Controls.Add(this.btnIns);
             this.groupBox1.Controls.Add(this.lblTotal);
             this.groupBox1.Controls.Add(this.label10);
@@ -206,7 +208,7 @@
             this.btnIns.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIns.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnIns.Location = new System.Drawing.Point(514, 672);
+            this.btnIns.Location = new System.Drawing.Point(356, 668);
             this.btnIns.Name = "btnIns";
             this.btnIns.Size = new System.Drawing.Size(140, 50);
             this.btnIns.TabIndex = 52;
@@ -305,7 +307,7 @@
             this.btnMod.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMod.ForeColor = System.Drawing.Color.Black;
-            this.btnMod.Location = new System.Drawing.Point(678, 672);
+            this.btnMod.Location = new System.Drawing.Point(520, 668);
             this.btnMod.Name = "btnMod";
             this.btnMod.Size = new System.Drawing.Size(145, 50);
             this.btnMod.TabIndex = 45;
@@ -533,6 +535,20 @@
             this.label6.TabIndex = 35;
             this.label6.Text = "Fecha";
             // 
+            // btnEli
+            // 
+            this.btnEli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
+            this.btnEli.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEli.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEli.ForeColor = System.Drawing.Color.Black;
+            this.btnEli.Location = new System.Drawing.Point(687, 668);
+            this.btnEli.Name = "btnEli";
+            this.btnEli.Size = new System.Drawing.Size(140, 50);
+            this.btnEli.TabIndex = 53;
+            this.btnEli.Text = "ELIMINAR";
+            this.btnEli.UseVisualStyleBackColor = false;
+            this.btnEli.Click += new System.EventHandler(this.btnEli_Click);
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -592,5 +608,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblIVA;
         private System.Windows.Forms.Button btnIns;
+        private System.Windows.Forms.Button btnEli;
     }
 }

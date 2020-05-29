@@ -245,7 +245,9 @@ namespace capa_presentacion
                 
         private void btnIns_Click(object sender, EventArgs e)
         {
-            string id = listaUsuarios.Count.ToString();
+            int totalFilas = dt.Rows.Count;
+            DataRow ultimaFila = dt.Rows[totalFilas-1];
+            string id = (Convert.ToInt32(ultimaFila["ID"]) + 1).ToString();
             string puebloID = listaPueblos[cbPueblo.SelectedIndex].LocalidadID;
             string provinciaID = listaProvincias[cbProvincia.SelectedIndex].ProvinciaID;
             string fecha = dtpNac.Value.ToString("yyyy-MM-dd");
@@ -256,6 +258,8 @@ namespace capa_presentacion
                 MessageBox.Show("Usuario insertado", "Insertar usuario",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 leer_usuarios();
+                vaciarCampos();
+                selectedUser = null;
             }
             else
             {
@@ -331,6 +335,8 @@ namespace capa_presentacion
                             MessageBox.Show("Usuario eliminado", "Eliminar usuario",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                             leer_usuarios();
+                            vaciarCampos();
+                            selectedUser = null;
                         }
                         else
                         {

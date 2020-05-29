@@ -11,9 +11,12 @@ namespace capa_negocio
     {
         private Datos bd;
 
+        private List<Usuario> listaUsuarios;
+
         public Negocio()
         {
             bd = new Datos();
+            listaUsuarios = GetUsuarios();
         }
 
         public Usuario GetUsuario(string id) { return bd.GetUsuario(id); }
@@ -36,8 +39,6 @@ namespace capa_negocio
 
         public bool Validar(string us, string ps)
         {
-            List<Usuario> listaUsuarios = GetUsuarios();
-
             if (listaUsuarios != null)
             {
                 for (int i = 0; i < listaUsuarios.Count; i++)
@@ -124,6 +125,11 @@ namespace capa_negocio
         public bool InsertarPedido(string pedidoId, string usuarioId, string fecha)
         {
             return (bd.InsertarPedido(pedidoId,usuarioId,fecha));
+        }
+
+        public bool EliminarPedido(string pedidoId)
+        {
+            return (bd.EliminarPedido(pedidoId));
         }
 
         public bool InsertarLinped(string pedidoId, string linea, string productoId,

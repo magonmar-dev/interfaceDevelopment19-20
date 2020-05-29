@@ -75,6 +75,7 @@ namespace capa_presentacion
 
             btnIns.Enabled = true;
             btnMod.Enabled = false;
+            btnEli.Enabled = false;
         }
 
         private void RellenarArticulos(object sender, EventArgs e)
@@ -211,6 +212,7 @@ namespace capa_presentacion
                 dgvLinped.Enabled = false;
                 btnIns.Enabled = true;
                 btnMod.Enabled = false;
+                btnEli.Enabled = false;
                 cbUsu.Enabled = true;
                 dtpFecha.Enabled = true;
             }
@@ -233,6 +235,7 @@ namespace capa_presentacion
                 btnAdd.Enabled = true;
                 btnIns.Enabled = false;
                 btnMod.Enabled = true;
+                btnEli.Enabled = true;
                 dgvLinped.Enabled = true;
 
                 cbUsu.Enabled = false;
@@ -294,7 +297,7 @@ namespace capa_presentacion
                 }
                 else
                 {
-                    string pedidoId = (listaPedidos.Count+1).ToString();
+                    string pedidoId = (listaPedidos.Count+2).ToString();
                     string usuarioId = listaUsuarios[cbUsu.SelectedIndex].UsuarioID;
                     string fecha = dtpFecha.Value.ToString("yyyy-MM-dd");
 
@@ -335,6 +338,8 @@ namespace capa_presentacion
                         vaciarEtiquetasTotales();
                         dtLinped.Clear();
                         dgvLinped.Enabled = false;
+                        cbUsu.Enabled = true;
+                        dtpFecha.Enabled = true;
                     }
                     else
                     {
@@ -444,6 +449,48 @@ namespace capa_presentacion
 
                 ActualizarTotales();
             }
+        }
+
+        private void btnEli_Click(object sender, EventArgs e)
+        {
+            string pedidoId = selectedOrder.PedidoID;
+
+            DialogResult result = MessageBox.Show("¿Seguro que quiere eliminar este pedido?\n\n" +
+                    "ID: " + selectedOrder.PedidoID + "\nUsuario: " + neg.GetUsuario(selectedOrder.UsuarioID).Nombre
+                    + "\nFecha: " + selectedOrder.Fecha + "\nLíneas de pedido: " + dtLinped.Rows.Count
+                    , "Eliminar pedido " + pedidoId, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if(result == DialogResult.Yes)
+            {
+                bool error = false;
+
+                if (neg.GetLinpeds(pedidoId).Count != 0)
+                {
+                    error = !neg.EliminarLinpeds(pedidoId);
+                }
+
+                error = !neg.EliminarPedido(pedidoId);
+
+                if (error)
+                {
+                    MessageBox.Show("Error al eliminar el pedido", "Eliminar pedido",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Pedido eliminado", "Eliminar pedido",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    leer_pedidos();
+                    selectedOrder = null;
+                    vaciarCamposPedido();
+                    vaciarCamposArticulos();
+                    vaciarEtiquetasTotales();
+                    dtLinped.Clear();
+                    dgvLinped.Enabled = false;
+                }
+            }
+            else if (result == DialogResult.No) { }
         }
     }
 }
