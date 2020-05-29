@@ -23,7 +23,7 @@ namespace capa_presentacion
 
         private Usuario selectedUser;
 
-        public Usuarios(Negocio neg, ToolStripStatusLabel lbl)
+        public Usuarios(Negocio neg)
         {
             InitializeComponent();
 

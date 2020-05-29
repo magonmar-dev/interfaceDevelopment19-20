@@ -131,12 +131,12 @@
             // 
             this.cbTipoB.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbTipoB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTipoB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cbTipoB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbTipoB.FormattingEnabled = true;
-            this.cbTipoB.ItemHeight = 18;
+            this.cbTipoB.ItemHeight = 20;
             this.cbTipoB.Location = new System.Drawing.Point(423, 36);
             this.cbTipoB.Name = "cbTipoB";
-            this.cbTipoB.Size = new System.Drawing.Size(162, 26);
+            this.cbTipoB.Size = new System.Drawing.Size(162, 28);
             this.cbTipoB.TabIndex = 2;
             this.cbTipoB.SelectedIndexChanged += new System.EventHandler(this.cbTipoB_SelectedIndexChanged);
             // 
@@ -155,10 +155,11 @@
             // txbNomB
             // 
             this.txbNomB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbNomB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbNomB.Location = new System.Drawing.Point(99, 37);
             this.txbNomB.MaxLength = 35;
             this.txbNomB.Name = "txbNomB";
-            this.txbNomB.Size = new System.Drawing.Size(162, 24);
+            this.txbNomB.Size = new System.Drawing.Size(162, 26);
             this.txbNomB.TabIndex = 1;
             this.txbNomB.TextChanged += new System.EventHandler(this.txbNomB_TextChanged);
             // 
@@ -204,10 +205,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panelCamara);
-            this.groupBox1.Controls.Add(this.panelMemoria);
             this.groupBox1.Controls.Add(this.cbTipo);
-            this.groupBox1.Controls.Add(this.panelTV);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.panelObjetivo);
             this.groupBox1.Controls.Add(this.txbEspec);
@@ -243,9 +241,9 @@
             this.panelCamara.Controls.Add(this.txbSensor);
             this.panelCamara.Controls.Add(this.label23);
             this.panelCamara.Controls.Add(this.txbResolCam);
-            this.panelCamara.Location = new System.Drawing.Point(6, 354);
+            this.panelCamara.Location = new System.Drawing.Point(0, 0);
             this.panelCamara.Name = "panelCamara";
-            this.panelCamara.Size = new System.Drawing.Size(454, 309);
+            this.panelCamara.Size = new System.Drawing.Size(454, 300);
             this.panelCamara.TabIndex = 44;
             this.panelCamara.Visible = false;
             // 
@@ -277,20 +275,22 @@
             // 
             this.txbObjetivo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbObjetivo.Enabled = false;
+            this.txbObjetivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbObjetivo.Location = new System.Drawing.Point(163, 181);
             this.txbObjetivo.MaxLength = 35;
             this.txbObjetivo.Name = "txbObjetivo";
-            this.txbObjetivo.Size = new System.Drawing.Size(274, 24);
+            this.txbObjetivo.Size = new System.Drawing.Size(274, 26);
             this.txbObjetivo.TabIndex = 41;
             // 
             // txbZoom
             // 
             this.txbZoom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbZoom.Enabled = false;
+            this.txbZoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbZoom.Location = new System.Drawing.Point(163, 262);
             this.txbZoom.MaxLength = 35;
             this.txbZoom.Name = "txbZoom";
-            this.txbZoom.Size = new System.Drawing.Size(274, 24);
+            this.txbZoom.Size = new System.Drawing.Size(274, 26);
             this.txbZoom.TabIndex = 45;
             // 
             // label20
@@ -321,20 +321,22 @@
             // 
             this.txbPantallaCam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbPantallaCam.Enabled = false;
+            this.txbPantallaCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbPantallaCam.Location = new System.Drawing.Point(163, 221);
             this.txbPantallaCam.MaxLength = 35;
             this.txbPantallaCam.Name = "txbPantallaCam";
-            this.txbPantallaCam.Size = new System.Drawing.Size(274, 24);
+            this.txbPantallaCam.Size = new System.Drawing.Size(274, 26);
             this.txbPantallaCam.TabIndex = 43;
             // 
             // txbFactor
             // 
             this.txbFactor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFactor.Enabled = false;
+            this.txbFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbFactor.Location = new System.Drawing.Point(163, 142);
             this.txbFactor.MaxLength = 35;
             this.txbFactor.Name = "txbFactor";
-            this.txbFactor.Size = new System.Drawing.Size(274, 24);
+            this.txbFactor.Size = new System.Drawing.Size(274, 26);
             this.txbFactor.TabIndex = 39;
             // 
             // label21
@@ -353,10 +355,11 @@
             // 
             this.txbTipoCam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbTipoCam.Enabled = false;
+            this.txbTipoCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbTipoCam.Location = new System.Drawing.Point(163, 102);
             this.txbTipoCam.MaxLength = 35;
             this.txbTipoCam.Name = "txbTipoCam";
-            this.txbTipoCam.Size = new System.Drawing.Size(274, 24);
+            this.txbTipoCam.Size = new System.Drawing.Size(274, 26);
             this.txbTipoCam.TabIndex = 37;
             // 
             // label22
@@ -375,10 +378,11 @@
             // 
             this.txbSensor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbSensor.Enabled = false;
+            this.txbSensor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbSensor.Location = new System.Drawing.Point(163, 60);
             this.txbSensor.MaxLength = 35;
             this.txbSensor.Name = "txbSensor";
-            this.txbSensor.Size = new System.Drawing.Size(274, 24);
+            this.txbSensor.Size = new System.Drawing.Size(274, 26);
             this.txbSensor.TabIndex = 35;
             // 
             // label23
@@ -397,17 +401,19 @@
             // 
             this.txbResolCam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbResolCam.Enabled = false;
+            this.txbResolCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbResolCam.Location = new System.Drawing.Point(163, 18);
             this.txbResolCam.MaxLength = 35;
             this.txbResolCam.Name = "txbResolCam";
-            this.txbResolCam.Size = new System.Drawing.Size(274, 24);
+            this.txbResolCam.Size = new System.Drawing.Size(274, 26);
             this.txbResolCam.TabIndex = 33;
             // 
             // panelMemoria
             // 
+            this.panelMemoria.Controls.Add(this.panelCamara);
             this.panelMemoria.Controls.Add(this.label5);
             this.panelMemoria.Controls.Add(this.txbTipoMem);
-            this.panelMemoria.Location = new System.Drawing.Point(5, 350);
+            this.panelMemoria.Location = new System.Drawing.Point(0, 0);
             this.panelMemoria.Name = "panelMemoria";
             this.panelMemoria.Size = new System.Drawing.Size(455, 62);
             this.panelMemoria.TabIndex = 32;
@@ -440,16 +446,17 @@
             this.cbTipo.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipo.Enabled = false;
-            this.cbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.ItemHeight = 18;
+            this.cbTipo.ItemHeight = 20;
             this.cbTipo.Location = new System.Drawing.Point(169, 329);
             this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(274, 26);
+            this.cbTipo.Size = new System.Drawing.Size(274, 28);
             this.cbTipo.TabIndex = 7;
             // 
             // panelTV
             // 
+            this.panelTV.Controls.Add(this.panelMemoria);
             this.panelTV.Controls.Add(this.ckbTDT);
             this.panelTV.Controls.Add(this.label10);
             this.panelTV.Controls.Add(this.label9);
@@ -460,7 +467,7 @@
             this.panelTV.Controls.Add(this.txbPantallaTV);
             this.panelTV.Controls.Add(this.label6);
             this.panelTV.Controls.Add(this.txbPanel);
-            this.panelTV.Location = new System.Drawing.Point(6, 352);
+            this.panelTV.Location = new System.Drawing.Point(0, 0);
             this.panelTV.Name = "panelTV";
             this.panelTV.Size = new System.Drawing.Size(454, 221);
             this.panelTV.TabIndex = 35;
@@ -470,6 +477,7 @@
             // 
             this.ckbTDT.AutoSize = true;
             this.ckbTDT.Enabled = false;
+            this.ckbTDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.ckbTDT.Location = new System.Drawing.Point(163, 185);
             this.ckbTDT.Name = "ckbTDT";
             this.ckbTDT.Size = new System.Drawing.Size(18, 17);
@@ -504,10 +512,11 @@
             // 
             this.txbHD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbHD.Enabled = false;
+            this.txbHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbHD.Location = new System.Drawing.Point(163, 142);
             this.txbHD.MaxLength = 35;
             this.txbHD.Name = "txbHD";
-            this.txbHD.Size = new System.Drawing.Size(274, 24);
+            this.txbHD.Size = new System.Drawing.Size(274, 26);
             this.txbHD.TabIndex = 39;
             // 
             // label8
@@ -526,10 +535,11 @@
             // 
             this.txbResolTV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbResolTV.Enabled = false;
+            this.txbResolTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbResolTV.Location = new System.Drawing.Point(163, 102);
             this.txbResolTV.MaxLength = 35;
             this.txbResolTV.Name = "txbResolTV";
-            this.txbResolTV.Size = new System.Drawing.Size(274, 24);
+            this.txbResolTV.Size = new System.Drawing.Size(274, 26);
             this.txbResolTV.TabIndex = 37;
             // 
             // label7
@@ -548,10 +558,11 @@
             // 
             this.txbPantallaTV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbPantallaTV.Enabled = false;
+            this.txbPantallaTV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbPantallaTV.Location = new System.Drawing.Point(163, 60);
             this.txbPantallaTV.MaxLength = 35;
             this.txbPantallaTV.Name = "txbPantallaTV";
-            this.txbPantallaTV.Size = new System.Drawing.Size(274, 24);
+            this.txbPantallaTV.Size = new System.Drawing.Size(274, 26);
             this.txbPantallaTV.TabIndex = 35;
             // 
             // label6
@@ -570,10 +581,11 @@
             // 
             this.txbPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbPanel.Enabled = false;
+            this.txbPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbPanel.Location = new System.Drawing.Point(163, 19);
             this.txbPanel.MaxLength = 35;
             this.txbPanel.Name = "txbPanel";
-            this.txbPanel.Size = new System.Drawing.Size(274, 24);
+            this.txbPanel.Size = new System.Drawing.Size(274, 26);
             this.txbPanel.TabIndex = 33;
             // 
             // label4
@@ -591,6 +603,7 @@
             // panelObjetivo
             // 
             this.panelObjetivo.Controls.Add(this.label11);
+            this.panelObjetivo.Controls.Add(this.panelTV);
             this.panelObjetivo.Controls.Add(this.txbEspeciales);
             this.panelObjetivo.Controls.Add(this.label15);
             this.panelObjetivo.Controls.Add(this.txbApertura);
@@ -600,7 +613,7 @@
             this.panelObjetivo.Controls.Add(this.txbMontura);
             this.panelObjetivo.Controls.Add(this.label18);
             this.panelObjetivo.Controls.Add(this.txbTipoObj);
-            this.panelObjetivo.Location = new System.Drawing.Point(6, 354);
+            this.panelObjetivo.Location = new System.Drawing.Point(7, 363);
             this.panelObjetivo.Name = "panelObjetivo";
             this.panelObjetivo.Size = new System.Drawing.Size(454, 221);
             this.panelObjetivo.TabIndex = 43;
@@ -622,10 +635,11 @@
             // 
             this.txbEspeciales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbEspeciales.Enabled = false;
+            this.txbEspeciales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbEspeciales.Location = new System.Drawing.Point(162, 181);
             this.txbEspeciales.MaxLength = 35;
             this.txbEspeciales.Name = "txbEspeciales";
-            this.txbEspeciales.Size = new System.Drawing.Size(274, 24);
+            this.txbEspeciales.Size = new System.Drawing.Size(274, 26);
             this.txbEspeciales.TabIndex = 41;
             // 
             // label15
@@ -644,10 +658,11 @@
             // 
             this.txbApertura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbApertura.Enabled = false;
+            this.txbApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbApertura.Location = new System.Drawing.Point(163, 142);
             this.txbApertura.MaxLength = 35;
             this.txbApertura.Name = "txbApertura";
-            this.txbApertura.Size = new System.Drawing.Size(274, 24);
+            this.txbApertura.Size = new System.Drawing.Size(274, 26);
             this.txbApertura.TabIndex = 39;
             // 
             // label16
@@ -666,10 +681,11 @@
             // 
             this.txbFocal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbFocal.Enabled = false;
+            this.txbFocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbFocal.Location = new System.Drawing.Point(163, 102);
             this.txbFocal.MaxLength = 35;
             this.txbFocal.Name = "txbFocal";
-            this.txbFocal.Size = new System.Drawing.Size(274, 24);
+            this.txbFocal.Size = new System.Drawing.Size(274, 26);
             this.txbFocal.TabIndex = 37;
             // 
             // label17
@@ -688,10 +704,11 @@
             // 
             this.txbMontura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbMontura.Enabled = false;
+            this.txbMontura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbMontura.Location = new System.Drawing.Point(163, 60);
             this.txbMontura.MaxLength = 35;
             this.txbMontura.Name = "txbMontura";
-            this.txbMontura.Size = new System.Drawing.Size(274, 24);
+            this.txbMontura.Size = new System.Drawing.Size(274, 26);
             this.txbMontura.TabIndex = 35;
             // 
             // label18
@@ -710,16 +727,18 @@
             // 
             this.txbTipoObj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbTipoObj.Enabled = false;
+            this.txbTipoObj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbTipoObj.Location = new System.Drawing.Point(162, 18);
             this.txbTipoObj.MaxLength = 35;
             this.txbTipoObj.Name = "txbTipoObj";
-            this.txbTipoObj.Size = new System.Drawing.Size(274, 24);
+            this.txbTipoObj.Size = new System.Drawing.Size(274, 26);
             this.txbTipoObj.TabIndex = 33;
             // 
             // txbEspec
             // 
             this.txbEspec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbEspec.Enabled = false;
+            this.txbEspec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbEspec.Location = new System.Drawing.Point(169, 161);
             this.txbEspec.MaxLength = 500;
             this.txbEspec.Multiline = true;
@@ -744,18 +763,19 @@
             this.cbMarca.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarca.Enabled = false;
-            this.cbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.ItemHeight = 18;
+            this.cbMarca.ItemHeight = 20;
             this.cbMarca.Location = new System.Drawing.Point(169, 117);
             this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(274, 26);
+            this.cbMarca.Size = new System.Drawing.Size(274, 28);
             this.cbMarca.TabIndex = 5;
             // 
             // nudPvp
             // 
             this.nudPvp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudPvp.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nudPvp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.nudPvp.Location = new System.Drawing.Point(169, 77);
             this.nudPvp.Maximum = new decimal(new int[] {
             10000,
@@ -764,7 +784,7 @@
             0});
             this.nudPvp.Name = "nudPvp";
             this.nudPvp.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.nudPvp.Size = new System.Drawing.Size(274, 24);
+            this.nudPvp.Size = new System.Drawing.Size(274, 26);
             this.nudPvp.TabIndex = 3;
             this.nudPvp.ThousandsSeparator = true;
             // 
@@ -797,10 +817,11 @@
             this.txbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txbNombre.Enabled = false;
+            this.txbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbNombre.Location = new System.Drawing.Point(169, 36);
             this.txbNombre.MaxLength = 50;
             this.txbNombre.Name = "txbNombre";
-            this.txbNombre.Size = new System.Drawing.Size(274, 24);
+            this.txbNombre.Size = new System.Drawing.Size(274, 26);
             this.txbNombre.TabIndex = 4;
             // 
             // label2

@@ -12,6 +12,8 @@ namespace capa_presentacion
         private Usuarios formUsuarios;
         private Productos formProductos;
         private Pedidos formPedidos;
+        private Estadisticas formEstadisticas;
+        private AcercaDe formAcercaDe;
 
         DateTime timer;
         double seconds = 0;
@@ -31,6 +33,8 @@ namespace capa_presentacion
             lblTimer.Text = timer.ToString("HH:mm:ss");
 
             lanzarFormUsuarios();
+
+            lblStatus.Text = "AYUDA: Ctrl + Click para eliminar selección de la tabla";
         }
 
         private void btnSalir_Click(object sender, System.EventArgs e)
@@ -82,11 +86,13 @@ namespace capa_presentacion
             this.IsMdiContainer = false;
             this.IsMdiContainer = true;
 
-            formUsuarios = new Usuarios(neg, lblStatus);
+            formUsuarios = new Usuarios(neg);
 
             formUsuarios.MdiParent = this;
             formUsuarios.ControlBox = false;
             formUsuarios.FormBorderStyle = FormBorderStyle.None;
+
+            lblStatus.Text = "AYUDA: Ctrl + Click para eliminar selección de la tabla";
 
             formUsuarios.Show();
         }
@@ -114,11 +120,13 @@ namespace capa_presentacion
             this.IsMdiContainer = false;
             this.IsMdiContainer = true;
 
-            formProductos = new Productos(neg, lblStatus);
+            formProductos = new Productos(neg);
 
             formProductos.MdiParent = this;
             formProductos.ControlBox = false;
             formProductos.FormBorderStyle = FormBorderStyle.None;
+
+            lblStatus.Text = "AYUDA: Ctrl + Click para eliminar selección de la tabla";
 
             formProductos.Show();
         }
@@ -130,13 +138,44 @@ namespace capa_presentacion
             this.IsMdiContainer = false;
             this.IsMdiContainer = true;
 
-            formPedidos = new Pedidos(neg, lblStatus);
+            formPedidos = new Pedidos(neg);
 
             formPedidos.MdiParent = this;
             formPedidos.ControlBox = false;
             formPedidos.FormBorderStyle = FormBorderStyle.None;
 
+            lblStatus.Text = "AYUDA: Ctrl + Click para eliminar selección de la tabla";
+
             formPedidos.Show();
+        }
+
+        private void btnEstadisticas_Click(object sender, EventArgs e)
+        {
+            cierra_formularios();
+
+            this.IsMdiContainer = false;
+            this.IsMdiContainer = true;
+
+            formEstadisticas = new Estadisticas(neg, lblStatus);
+
+            formEstadisticas.MdiParent = this;
+            formEstadisticas.ControlBox = false;
+            formEstadisticas.FormBorderStyle = FormBorderStyle.None;
+
+            lblStatus.Text = "";
+
+            formEstadisticas.Show();
+        }
+
+        private void btnAcerca_Click(object sender, EventArgs e)
+        {
+            cierra_formularios();
+
+            formAcercaDe = new AcercaDe();
+
+            lblStatus.Text = "";
+
+            formAcercaDe.Show();
         }
     }
 }

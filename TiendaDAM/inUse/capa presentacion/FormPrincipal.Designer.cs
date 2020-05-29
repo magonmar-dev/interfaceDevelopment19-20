@@ -73,7 +73,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 13, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1262, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1262, 28);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -88,7 +88,7 @@
             this.btnArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnArchivo.Name = "btnArchivo";
             this.btnArchivo.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnArchivo.Size = new System.Drawing.Size(83, 27);
+            this.btnArchivo.Size = new System.Drawing.Size(83, 24);
             this.btnArchivo.Text = "Archivo";
             this.btnArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -108,7 +108,7 @@
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnUsuarios.Size = new System.Drawing.Size(79, 27);
+            this.btnUsuarios.Size = new System.Drawing.Size(79, 24);
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
@@ -121,7 +121,7 @@
             this.btnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnProductos.Size = new System.Drawing.Size(89, 27);
+            this.btnProductos.Size = new System.Drawing.Size(89, 24);
             this.btnProductos.Text = "Productos";
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
@@ -134,7 +134,7 @@
             this.btnPedidos.Margin = new System.Windows.Forms.Padding(2);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnPedidos.Size = new System.Drawing.Size(75, 27);
+            this.btnPedidos.Size = new System.Drawing.Size(75, 24);
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
@@ -144,8 +144,9 @@
             this.btnEstadisticas.Margin = new System.Windows.Forms.Padding(2);
             this.btnEstadisticas.Name = "btnEstadisticas";
             this.btnEstadisticas.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnEstadisticas.Size = new System.Drawing.Size(99, 27);
+            this.btnEstadisticas.Size = new System.Drawing.Size(99, 24);
             this.btnEstadisticas.Text = "Estadísticas";
+            this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
             // 
             // btnInformes
             // 
@@ -156,7 +157,7 @@
             this.btnInformes.Margin = new System.Windows.Forms.Padding(2);
             this.btnInformes.Name = "btnInformes";
             this.btnInformes.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnInformes.Size = new System.Drawing.Size(81, 27);
+            this.btnInformes.Size = new System.Drawing.Size(81, 24);
             this.btnInformes.Text = "Informes";
             // 
             // btnAcerca
@@ -165,8 +166,9 @@
             this.btnAcerca.Margin = new System.Windows.Forms.Padding(2);
             this.btnAcerca.Name = "btnAcerca";
             this.btnAcerca.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnAcerca.Size = new System.Drawing.Size(98, 27);
+            this.btnAcerca.Size = new System.Drawing.Size(98, 24);
             this.btnAcerca.Text = "Acerca de...";
+            this.btnAcerca.Click += new System.EventHandler(this.btnAcerca_Click);
             // 
             // lblUsuario
             // 
@@ -207,9 +209,8 @@
             this.lblStatus.ForeColor = System.Drawing.Color.White;
             this.lblStatus.Margin = new System.Windows.Forms.Padding(10, 4, 0, 2);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(1097, 20);
+            this.lblStatus.Size = new System.Drawing.Size(1136, 20);
             this.lblStatus.Spring = true;
-            this.lblStatus.Text = "AYUDA: Ctrl + Click para eliminar selección de la tabla";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblHora

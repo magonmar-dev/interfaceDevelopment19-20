@@ -107,41 +107,45 @@
             // 
             this.txbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbEmail.Location = new System.Drawing.Point(204, 40);
             this.txbEmail.MaxLength = 50;
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(239, 24);
+            this.txbEmail.Size = new System.Drawing.Size(239, 26);
             this.txbEmail.TabIndex = 1;
             this.txbEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txbEmail_Validating);
             // 
             // txbPass
             // 
             this.txbPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbPass.Location = new System.Drawing.Point(204, 70);
             this.txbPass.MaxLength = 100;
             this.txbPass.Name = "txbPass";
             this.txbPass.PasswordChar = '*';
-            this.txbPass.Size = new System.Drawing.Size(239, 24);
+            this.txbPass.Size = new System.Drawing.Size(239, 26);
             this.txbPass.TabIndex = 2;
             this.txbPass.Validating += new System.ComponentModel.CancelEventHandler(this.txbPass_Validating);
             // 
             // txbNom
             // 
             this.txbNom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbNom.Location = new System.Drawing.Point(204, 130);
             this.txbNom.MaxLength = 35;
             this.txbNom.Name = "txbNom";
-            this.txbNom.Size = new System.Drawing.Size(239, 24);
+            this.txbNom.Size = new System.Drawing.Size(239, 26);
             this.txbNom.TabIndex = 4;
             this.txbNom.Validating += new System.ComponentModel.CancelEventHandler(this.txbNom_Validating);
             // 
             // txbApe
             // 
             this.txbApe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbApe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbApe.Location = new System.Drawing.Point(204, 160);
             this.txbApe.MaxLength = 55;
             this.txbApe.Name = "txbApe";
-            this.txbApe.Size = new System.Drawing.Size(239, 24);
+            this.txbApe.Size = new System.Drawing.Size(239, 26);
             this.txbApe.TabIndex = 5;
             this.txbApe.Validating += new System.ComponentModel.CancelEventHandler(this.txbApe_Validating);
             // 
@@ -149,29 +153,32 @@
             // 
             this.txbDNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbDNI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txbDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbDNI.Location = new System.Drawing.Point(204, 190);
             this.txbDNI.MaxLength = 12;
             this.txbDNI.Name = "txbDNI";
-            this.txbDNI.Size = new System.Drawing.Size(239, 24);
+            this.txbDNI.Size = new System.Drawing.Size(239, 26);
             this.txbDNI.TabIndex = 6;
             this.txbDNI.Validating += new System.ComponentModel.CancelEventHandler(this.txbDNI_Validating);
             // 
             // txbDir1
             // 
             this.txbDir1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbDir1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbDir1.Location = new System.Drawing.Point(204, 250);
             this.txbDir1.MaxLength = 45;
             this.txbDir1.Name = "txbDir1";
-            this.txbDir1.Size = new System.Drawing.Size(239, 24);
+            this.txbDir1.Size = new System.Drawing.Size(239, 26);
             this.txbDir1.TabIndex = 8;
             // 
             // txbDir2
             // 
             this.txbDir2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbDir2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbDir2.Location = new System.Drawing.Point(204, 280);
             this.txbDir2.MaxLength = 45;
             this.txbDir2.Name = "txbDir2";
-            this.txbDir2.Size = new System.Drawing.Size(239, 24);
+            this.txbDir2.Size = new System.Drawing.Size(239, 26);
             this.txbDir2.TabIndex = 9;
             // 
             // label1
@@ -285,12 +292,12 @@
             // dtpNac
             // 
             this.dtpNac.CalendarTitleBackColor = System.Drawing.Color.Aqua;
-            this.dtpNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dtpNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNac.Location = new System.Drawing.Point(204, 404);
             this.dtpNac.MaxDate = new System.DateTime(2020, 5, 26, 0, 0, 0, 0);
             this.dtpNac.Name = "dtpNac";
-            this.dtpNac.Size = new System.Drawing.Size(239, 24);
+            this.dtpNac.Size = new System.Drawing.Size(239, 26);
             this.dtpNac.TabIndex = 13;
             this.dtpNac.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             // 
@@ -333,11 +340,12 @@
             // txbRepPass
             // 
             this.txbRepPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbRepPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbRepPass.Location = new System.Drawing.Point(204, 100);
             this.txbRepPass.MaxLength = 100;
             this.txbRepPass.Name = "txbRepPass";
             this.txbRepPass.PasswordChar = '*';
-            this.txbRepPass.Size = new System.Drawing.Size(239, 24);
+            this.txbRepPass.Size = new System.Drawing.Size(239, 26);
             this.txbRepPass.TabIndex = 3;
             this.txbRepPass.Validating += new System.ComponentModel.CancelEventHandler(this.txbRepPass_Validating);
             // 
@@ -355,18 +363,20 @@
             // 
             // cbPueblo
             // 
+            this.cbPueblo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbPueblo.FormattingEnabled = true;
             this.cbPueblo.Location = new System.Drawing.Point(204, 372);
             this.cbPueblo.Name = "cbPueblo";
-            this.cbPueblo.Size = new System.Drawing.Size(239, 26);
+            this.cbPueblo.Size = new System.Drawing.Size(239, 28);
             this.cbPueblo.TabIndex = 12;
             // 
             // cbProvincia
             // 
+            this.cbProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbProvincia.FormattingEnabled = true;
             this.cbProvincia.Location = new System.Drawing.Point(204, 340);
             this.cbProvincia.Name = "cbProvincia";
-            this.cbProvincia.Size = new System.Drawing.Size(239, 26);
+            this.cbProvincia.Size = new System.Drawing.Size(239, 28);
             this.cbProvincia.TabIndex = 11;
             this.cbProvincia.SelectedIndexChanged += new System.EventHandler(this.cbProvincia_SelectedIndexChanged);
             // 
@@ -397,20 +407,22 @@
             // txbCod
             // 
             this.txbCod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txbCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txbCod.Location = new System.Drawing.Point(204, 310);
             this.txbCod.Mask = "99999";
             this.txbCod.Name = "txbCod";
-            this.txbCod.Size = new System.Drawing.Size(239, 24);
+            this.txbCod.Size = new System.Drawing.Size(239, 26);
             this.txbCod.TabIndex = 10;
             this.txbCod.ValidatingType = typeof(int);
             // 
             // mtxbTel
             // 
             this.mtxbTel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxbTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.mtxbTel.Location = new System.Drawing.Point(204, 220);
             this.mtxbTel.Mask = "000000000";
             this.mtxbTel.Name = "mtxbTel";
-            this.mtxbTel.Size = new System.Drawing.Size(239, 24);
+            this.mtxbTel.Size = new System.Drawing.Size(239, 26);
             this.mtxbTel.TabIndex = 7;
             // 
             // btnIns
@@ -507,10 +519,11 @@
             // 
             this.txbDniB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbDniB.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txbDniB.Location = new System.Drawing.Point(204, 126);
+            this.txbDniB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txbDniB.Location = new System.Drawing.Point(204, 124);
             this.txbDniB.MaxLength = 12;
             this.txbDniB.Name = "txbDniB";
-            this.txbDniB.Size = new System.Drawing.Size(239, 24);
+            this.txbDniB.Size = new System.Drawing.Size(239, 26);
             this.txbDniB.TabIndex = 17;
             this.txbDniB.TextChanged += new System.EventHandler(this.txbDniB_TextChanged);
             // 
@@ -530,10 +543,11 @@
             // 
             this.txbEmailB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txbEmailB.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txbEmailB.Location = new System.Drawing.Point(204, 96);
+            this.txbEmailB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txbEmailB.Location = new System.Drawing.Point(204, 94);
             this.txbEmailB.MaxLength = 50;
             this.txbEmailB.Name = "txbEmailB";
-            this.txbEmailB.Size = new System.Drawing.Size(239, 24);
+            this.txbEmailB.Size = new System.Drawing.Size(239, 26);
             this.txbEmailB.TabIndex = 16;
             this.txbEmailB.TextChanged += new System.EventHandler(this.txbEmailB_TextChanged);
             // 
@@ -552,10 +566,11 @@
             // txbNomB
             // 
             this.txbNomB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbNomB.Location = new System.Drawing.Point(204, 36);
+            this.txbNomB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txbNomB.Location = new System.Drawing.Point(204, 34);
             this.txbNomB.MaxLength = 35;
             this.txbNomB.Name = "txbNomB";
-            this.txbNomB.Size = new System.Drawing.Size(239, 24);
+            this.txbNomB.Size = new System.Drawing.Size(239, 26);
             this.txbNomB.TabIndex = 14;
             this.txbNomB.TextChanged += new System.EventHandler(this.txbNomB_TextChanged);
             // 
@@ -574,10 +589,11 @@
             // txbApeB
             // 
             this.txbApeB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbApeB.Location = new System.Drawing.Point(204, 66);
+            this.txbApeB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txbApeB.Location = new System.Drawing.Point(204, 64);
             this.txbApeB.MaxLength = 55;
             this.txbApeB.Name = "txbApeB";
-            this.txbApeB.Size = new System.Drawing.Size(239, 24);
+            this.txbApeB.Size = new System.Drawing.Size(239, 26);
             this.txbApeB.TabIndex = 15;
             this.txbApeB.TextChanged += new System.EventHandler(this.txbApeB_TextChanged);
             // 

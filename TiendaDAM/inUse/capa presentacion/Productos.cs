@@ -25,7 +25,7 @@ namespace capa_presentacion
 
         private Articulo selectedProduct;
 
-        public Productos(Negocio neg, ToolStripStatusLabel lbl)
+        public Productos(Negocio neg)
         {
             InitializeComponent();
 

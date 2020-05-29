@@ -100,12 +100,13 @@
             // 
             // dtpFechaB
             // 
+            this.dtpFechaB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaB.Location = new System.Drawing.Point(105, 82);
             this.dtpFechaB.MaxDate = new System.DateTime(2020, 5, 26, 0, 0, 0, 0);
             this.dtpFechaB.MinDate = new System.DateTime(2010, 3, 1, 0, 0, 0, 0);
             this.dtpFechaB.Name = "dtpFechaB";
-            this.dtpFechaB.Size = new System.Drawing.Size(138, 24);
+            this.dtpFechaB.Size = new System.Drawing.Size(138, 27);
             this.dtpFechaB.TabIndex = 2;
             this.dtpFechaB.Value = new System.DateTime(2010, 3, 1, 0, 0, 0, 0);
             this.dtpFechaB.ValueChanged += new System.EventHandler(this.dtpFechaB_ValueChanged);
@@ -125,10 +126,11 @@
             // txbUsuB
             // 
             this.txbUsuB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbUsuB.Location = new System.Drawing.Point(105, 40);
+            this.txbUsuB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbUsuB.Location = new System.Drawing.Point(105, 34);
             this.txbUsuB.MaxLength = 35;
             this.txbUsuB.Name = "txbUsuB";
-            this.txbUsuB.Size = new System.Drawing.Size(138, 24);
+            this.txbUsuB.Size = new System.Drawing.Size(138, 27);
             this.txbUsuB.TabIndex = 1;
             this.txbUsuB.TextChanged += new System.EventHandler(this.txbUsuB_TextChanged);
             // 
@@ -402,16 +404,18 @@
             // 
             // cbArt
             // 
+            this.cbArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbArt.FormattingEnabled = true;
             this.cbArt.Location = new System.Drawing.Point(410, 32);
             this.cbArt.Name = "cbArt";
-            this.cbArt.Size = new System.Drawing.Size(162, 26);
+            this.cbArt.Size = new System.Drawing.Size(162, 28);
             this.cbArt.TabIndex = 7;
             // 
             // nudCant
             // 
             this.nudCant.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudCant.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nudCant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.nudCant.Location = new System.Drawing.Point(693, 33);
             this.nudCant.Maximum = new decimal(new int[] {
             10000,
@@ -425,7 +429,7 @@
             0});
             this.nudCant.Name = "nudCant";
             this.nudCant.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.nudCant.Size = new System.Drawing.Size(64, 24);
+            this.nudCant.Size = new System.Drawing.Size(64, 26);
             this.nudCant.TabIndex = 8;
             this.nudCant.ThousandsSeparator = true;
             this.nudCant.Value = new decimal(new int[] {
@@ -462,12 +466,12 @@
             // 
             this.cbTipo.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.ItemHeight = 18;
+            this.cbTipo.ItemHeight = 20;
             this.cbTipo.Location = new System.Drawing.Point(194, 32);
             this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(115, 26);
+            this.cbTipo.Size = new System.Drawing.Size(115, 28);
             this.cbTipo.TabIndex = 6;
             this.cbTipo.SelectedIndexChanged += new System.EventHandler(this.RellenarArticulos);
             // 
@@ -485,21 +489,23 @@
             // 
             // cbUsu
             // 
+            this.cbUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbUsu.FormattingEnabled = true;
-            this.cbUsu.Location = new System.Drawing.Point(215, 50);
+            this.cbUsu.Location = new System.Drawing.Point(214, 49);
             this.cbUsu.Name = "cbUsu";
-            this.cbUsu.Size = new System.Drawing.Size(244, 26);
+            this.cbUsu.Size = new System.Drawing.Size(244, 28);
             this.cbUsu.TabIndex = 4;
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dtpFecha.Location = new System.Drawing.Point(560, 52);
+            this.dtpFecha.Location = new System.Drawing.Point(561, 49);
             this.dtpFecha.MaxDate = new System.DateTime(2020, 5, 26, 0, 0, 0, 0);
             this.dtpFecha.MinDate = new System.DateTime(2010, 3, 1, 0, 0, 0, 0);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(169, 24);
+            this.dtpFecha.Size = new System.Drawing.Size(169, 26);
             this.dtpFecha.TabIndex = 5;
             this.dtpFecha.Value = new System.DateTime(2010, 3, 1, 0, 0, 0, 0);
             // 

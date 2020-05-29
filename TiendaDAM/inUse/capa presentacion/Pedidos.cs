@@ -29,7 +29,7 @@ namespace capa_presentacion
 
         private Pedido selectedOrder;
 
-        public Pedidos(Negocio neg, ToolStripStatusLabel lbl)
+        public Pedidos(Negocio neg)
         {
             InitializeComponent();
 
