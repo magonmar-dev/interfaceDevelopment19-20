@@ -22,21 +22,20 @@
         </Grid.Background>
         <DataGrid x:Name="dataGridPedidos" Style="{StaticResource datagrid}" ItemsSource="{Binding Source={StaticResource lista_pedidos}}" HorizontalAlignment="Left" Height="421" Margin="26,200,0,0" VerticalAlignment="Top" Width="264" SelectionChanged="dataGridPedidos_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding UsuarioID}" Visibility="Collapsed"/>
-
-                <DataGridTextColumn Binding="{Binding PedidoID}" Width="50" Header="ID"/>
-                <DataGridTextColumn Binding="{Binding UsuarioNombre}" Width="*" Header="Usuario"/>
-                <DataGridTextColumn Binding="{Binding Fecha}" Width="*" Header="Fecha"/>
+                <DataGridTextColumn Binding="{Binding Path=PedidoID}" Width="*" Header="ID"/>
+                <DataGridTextColumn Binding="{Binding Path=UsuarioNombre}" Width="*" Header="Usuario"/>
+                <DataGridTextColumn Binding="{Binding Path=Fecha, StringFormat='yyyy-MM-dd'}" Width="*" Header="Fecha"/>
             </DataGrid.Columns>
         </DataGrid>
         <GroupBox Header="BUSCAR PEDIDOS" Foreground="#FFC99FEE" HorizontalAlignment="Left" Height="174" Margin="26,10,0,0" VerticalAlignment="Top" Width="264">
             <Grid Margin="0,-1,0,0">
                 <Label Style="{StaticResource label}" Content="Usuario" Height="25" Margin="15,19,165,109" FontSize="14"/>
-                <TextBox x:Name="txbUsuB" Style="{StaticResource textBox}" TextChanged="txbNomB_TextChanged"  Margin="87,19,17,109" Height="25" FontSize="14" TextWrapping="Wrap"/>
+                <TextBox x:Name="txbUsuB" Style="{StaticResource textBox}"  Margin="87,19,17,109" Height="25" FontSize="14"/>
                 <Label Style="{StaticResource label}" Content="Fecha" Height="25" Margin="15,64,165,64" FontSize="14"/>
                 <DatePicker x:Name="dpFechaB" Style="{StaticResource datePicker}" HorizontalAlignment="Left" Margin="86,64,0,0" VerticalAlignment="Top" 
-                    Height="25" FontSize="14" Width="149" SelectedDateChanged="dpFechaB_SelectedDateChanged"/>
-                <Button x:Name="btnBorrarFiltros" Content="Borrar filtros" Style="{StaticResource button}" Margin="75,110,68,10" FontSize="14" Click="btnBorrarFiltros_Click"/>
+                    Height="25" FontSize="14" Width="149"/>
+                <Button x:Name="btnBorrarFiltros" Content="Borrar filtros" Style="{StaticResource button}" Margin="147,110,10,10" FontSize="14" Click="btnBorrarFiltros_Click"/>
+                <Button x:Name="btnAplicarFiltros" Content="Aplicar filtros" Style="{StaticResource button}" Margin="10,110,147,10" FontSize="14" Click="btnAplicarFiltros_Click"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="DATOS PEDIDO" Foreground="#FFC99FEE" HorizontalAlignment="Left" Height="611" Margin="307.2,10,0,0" VerticalAlignment="Top" Width="634.8" UseLayoutRounding="False">
@@ -57,11 +56,10 @@
                         <xctk:IntegerUpDown Value="1" Minimum="1" x:Name="upCant" Background="{x:Null}" Foreground="White" FontSize="14" Margin="523,21,10.2,223" Height="25"/>
                         <DataGrid x:Name="dataGridLinpeds" Style="{StaticResource datagrid}" ItemsSource="{Binding Source={StaticResource lista_linpeds}}" HorizontalAlignment="Left" Height="189" Margin="10,61,0,0" VerticalAlignment="Top" Width="515" SelectionChanged="dataGridLinpeds_SelectionChanged">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Binding="{Binding Linea}" Width="50" Header="Línea"/>
-                                <DataGridTextColumn Binding="{Binding ArticuloID}" Width="*" Visibility="Hidden"/>
-                                <DataGridTextColumn Binding="{Binding ArticuloNombre}" Width="*" Header="Artículo"/>
-                                <DataGridTextColumn Binding="{Binding Importe}" Width="*" Header="Importe"/>
-                                <DataGridTextColumn Binding="{Binding Cantidad}" Width="*" Header="Cantidad"/>
+                                <DataGridTextColumn Binding="{Binding Path=Linea}" Width="*" Header="Línea"/>
+                                <DataGridTextColumn Binding="{Binding Path=ArticuloNombre}" Width="*" Header="Artículo"/>
+                                <DataGridTextColumn Binding="{Binding Path=Importe}" Width="*" Header="Importe"/>
+                                <DataGridTextColumn Binding="{Binding Path=Cantidad}" Width="*" Header="Cantidad"/>
                             </DataGrid.Columns>
                         </DataGrid>
                         <Button x:Name="btnAdd" Content="+" Style="{StaticResource button}" FontSize="30" Margin="540,61,10.2,167" Click="btnAdd_Click" VerticalContentAlignment="Top"/>
@@ -69,12 +67,12 @@
                     </Grid>
                 </GroupBox>
                 <Label Style="{StaticResource label}" Content="Total sin IVA" Margin="10,402,505.2,161.8" FontSize="14"/>
-                <Label x:Name="lblTotalSinIVA" Style="{StaticResource label}" Content="0.00 €" Margin="123,402,436.2,161.8" FontSize="14"/>
+                <Label x:Name="lblTotalSinIVA" Style="{StaticResource label}" Content="0.00 €" Margin="123,402,393.2,161.8" FontSize="14" HorizontalContentAlignment="Left"/>
                 <Label Style="{StaticResource label}" Content="IVA (21%)" Margin="10,432,505.2,131.8" FontSize="14"/>
-                <Label x:Name="lblIVA" Style="{StaticResource label}" Content="0.00 €" Margin="123,432,436.2,131.8" FontSize="14"/>
-                <Label Style="{StaticResource label}" Content="______________________________________________" Margin="10,446,420.2,100.8" FontSize="14"/>
+                <Label x:Name="lblIVA" Style="{StaticResource label}" Content="0.00 €" Margin="123,432,393.2,131.8" FontSize="14" HorizontalContentAlignment="Left"/>
+                <Label Style="{StaticResource label}" Content="______________________________________________" Margin="10,446,421.2,100.8" FontSize="14"/>
                 <Label Style="{StaticResource label}" Content="Total" Margin="54,478,505.2,85.8" FontSize="14"/>
-                <Label x:Name="lblTotal" Style="{StaticResource label}" Content="0.00 €" Margin="123,478,436.2,85.8" FontSize="14" RenderTransformOrigin="0.506,0.964"/>
+                <Label x:Name="lblTotal" Style="{StaticResource label}" Content="0.00 €" Margin="123,478,393.2,85.8" FontSize="14" RenderTransformOrigin="0.506,0.964" HorizontalContentAlignment="Left"/>
                 <Button x:Name="btnIns" Content="Insertar" Style="{StaticResource button}" FontSize="18" Margin="221,525,293.2,0" VerticalAlignment="Top" Height="42" Click="btnIns_Click"/>
                 <Button x:Name="btnMod" Content="Modificar" Style="{StaticResource button}" FontSize="18" Margin="358,525,152.2,0" VerticalAlignment="Top" Height="42" Click="btnMod_Click"/>
                 <Button x:Name="btnEli" Content="Eliminar" Style="{StaticResource button}" FontSize="18" Margin="496,525,24.2,0" VerticalAlignment="Top" Height="42" Click="btnEli_Click"/>

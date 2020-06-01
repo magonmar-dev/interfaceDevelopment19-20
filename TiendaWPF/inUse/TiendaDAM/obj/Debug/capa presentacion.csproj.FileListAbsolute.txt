@@ -83,3 +83,11 @@ D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\bin\Deb
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\bin\Debug\LiveCharts.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\bin\Debug\LiveCharts.Wpf.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\bin\Debug\LiveCharts.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\bin\Debug\LiveCharts.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\bin\Debug\LiveCharts.Wpf.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\bin\Debug\LiveCharts.Wpf.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\obj\Debug\Estadisticas.g.cs
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\obj\Debug\Estadisticas.baml

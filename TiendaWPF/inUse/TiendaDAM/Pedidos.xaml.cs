@@ -49,13 +49,13 @@ namespace capa_presentacion
             vistaLinpeds = (CollectionViewSource)this.Resources["lista_linpeds"];
             listaLinpeds = new List<Linped>();
 
-            LeerPedidos();
-            vistaPedidos.Source = listaPedidos;
-            vistaLinpeds.Source = listaLinpeds;
-
             listaUsuarios = neg.GetUsuarios();
             cbUsu.ItemsSource = listaUsuarios;
             cbUsu.SelectedIndex = 0;
+
+            LeerPedidos();
+
+            dataGridLinpeds.ItemsSource = null;
 
             listaArticulos = new List<Articulo>();
 
@@ -67,8 +67,6 @@ namespace capa_presentacion
             }
             cbTipoArt.SelectedIndex = 0;
 
-            dpFechaB.SelectedDate = DateTime.ParseExact("01/03/2010",
-              "dd/MM/yyyy", CultureInfo.InvariantCulture);
             dpFechaB.DisplayDateEnd = DateTime.Today;
 
             dpFecha.SelectedDate = DateTime.Today;
@@ -78,6 +76,16 @@ namespace capa_presentacion
             btnMod.IsEnabled = false;
             btnEli.IsEnabled = false;
             btnDel.IsEnabled = false;
+        }
+
+        private Usuario ObtenerUsuario(string id)
+        {
+            foreach(Usuario u in listaUsuarios)
+            {
+                if (u.UsuarioID == id)
+                    return u;
+            }
+            return null;
         }
 
         private void LeerPedidos()
@@ -90,11 +98,12 @@ namespace capa_presentacion
                 ped.PedidoID = p.PedidoID;
                 ped.UsuarioID = p.UsuarioID;
                 ped.Fecha = p.Fecha.Substring(0,10);
-                ped.UsuarioNombre = neg.GetUsuario(p.UsuarioID).Nombre;
+                ped.UsuarioNombre = ObtenerUsuario(p.UsuarioID).Nombre;
 
                 listaPedidos.Add(ped);
             }
 
+            vistaPedidos.Source = listaPedidos;
             selectedOrder = null;
         }
 
@@ -112,15 +121,19 @@ namespace capa_presentacion
 
                 listaLinpeds.Add(lin);
             }
+
+            dataGridLinpeds.ItemsSource = listaLinpeds;
         }
 
         private void BuscarPedido()
         {
-            List<Pedido> pedidos = neg.GetPedidos()
-                .FindAll(p => neg.GetUsuario(p.UsuarioID).Nombre.ToUpper().StartsWith(txbUsuB.Text.ToUpper()));
+            string nombreUsu = txbUsuB.Text.Trim().ToUpper();
+            string fecha = (dpFechaB.SelectedDate != null ? ((DateTime)dpFechaB.SelectedDate).ToString("yyyy-MM-dd") : "");
 
-            if (dpFechaB.SelectedDate.ToString() != "01/03/2010")
-                pedidos = pedidos.FindAll(p => p.Fecha == dpFechaB.SelectedDate.ToString());
+            List<Pedido> pedidos = (from pedido in neg.GetPedidos().AsParallel()
+                                    where (ObtenerUsuario(pedido.UsuarioID).Nombre.Trim().ToUpper().StartsWith(nombreUsu) || nombreUsu.Length == 0) &&
+                                        (Convert.ToDateTime(pedido.Fecha).ToString("yyyy-MM-dd").Equals(fecha) || fecha.Length == 0)
+                                    select pedido).ToList();
 
             listaPedidos.Clear();
             foreach (Pedido p in pedidos)
@@ -129,18 +142,15 @@ namespace capa_presentacion
                 ped.PedidoID = p.PedidoID;
                 ped.UsuarioID = p.UsuarioID;
                 ped.Fecha = p.Fecha.Substring(0, 10);
-                ped.UsuarioNombre = neg.GetUsuario(p.UsuarioID).Nombre;
+                ped.UsuarioNombre = ObtenerUsuario(p.UsuarioID).Nombre;
 
                 listaPedidos.Add(ped);
             }
+
+            selectedOrder = null;
         }
 
-        private void txbNomB_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            BuscarPedido();
-        }
-
-        private void dpFechaB_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        private void btnAplicarFiltros_Click(object sender, RoutedEventArgs e)
         {
             BuscarPedido();
         }
@@ -148,8 +158,8 @@ namespace capa_presentacion
         private void btnBorrarFiltros_Click(object sender, RoutedEventArgs e)
         {
             txbUsuB.Clear();
-            dpFechaB.SelectedDate = DateTime.ParseExact("01/03/2010",
-              "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            dpFechaB.SelectedDate = null;
+            BuscarPedido();
         }
 
         private void VaciarCamposPedido()
@@ -179,6 +189,7 @@ namespace capa_presentacion
                 VaciarCamposArticulos();
                 VaciarEtiquetasTotales();
                 selectedOrder = null;
+                listaLinpeds.Clear();
                 dataGridLinpeds.ItemsSource = null;
                 dataGridLinpeds.IsEnabled = false;
                 btnIns.IsEnabled = true;
@@ -196,9 +207,11 @@ namespace capa_presentacion
                 VaciarCamposArticulos();
                 VaciarEtiquetasTotales();
 
-                cbUsu.SelectedItem = neg.GetUsuario(selectedOrder.UsuarioID);
+                cbUsu.SelectedItem = ObtenerUsuario(selectedOrder.UsuarioID);
                 dpFecha.SelectedDate = DateTime.Parse(selectedOrder.Fecha.Substring(0, 10));
 
+                listaLinpeds.Clear();
+                dataGridLinpeds.ItemsSource = null;
                 LeerLinpeds(selectedOrder.PedidoID);
                 ActualizarTotales();
 
@@ -219,10 +232,10 @@ namespace capa_presentacion
             int[] cantidades = new int[dataGridLinpeds.Items.Count];
 
             int i = 0;
-            foreach (DataRowView row in dataGridLinpeds.Items)
+            foreach (Linped linea in dataGridLinpeds.Items)
             {
-                importes[i] = Convert.ToSingle(row.Row.ItemArray[2].ToString());
-                cantidades[i] = Convert.ToInt32(row.Row.ItemArray[3].ToString());
+                importes[i] = Convert.ToSingle(linea.Importe);
+                cantidades[i] = Convert.ToInt32(linea.Cantidad);
                 i++;
             }
 
@@ -239,7 +252,6 @@ namespace capa_presentacion
             if (cbTipoArt.SelectedIndex == 0)
             {
                 listaArticulos = neg.GetProductos();
-                cbArt.ItemsSource = listaArticulos;
             }
             else
             {
@@ -250,10 +262,10 @@ namespace capa_presentacion
                         listaArticulos.Add(a);
                     }
                 }
-                cbArt.ItemsSource = listaArticulos;
             }
 
-            cbArt.SelectedIndex = 0;
+            cbArt.ItemsSource = listaArticulos;
+            cbArt.SelectedItem = listaArticulos[0];
         }
 
         private string BuscarProductoId(string nombre)
@@ -295,12 +307,12 @@ namespace capa_presentacion
                             MessageBoxButton.OK, MessageBoxImage.Information);
 
                         int lineasInsertadas = 0;
-                        foreach (DataRowView row in dataGridLinpeds.Items)
+                        foreach (Linped l in dataGridLinpeds.Items)
                         {
                             string linea = (lineasInsertadas + 1).ToString();
-                            string productoId = BuscarProductoId(row.Row.ItemArray[1].ToString());
-                            int importe = Convert.ToInt32(row.Row.ItemArray[2]);
-                            int cantidad = Convert.ToInt32(row.Row.ItemArray[3]);
+                            string productoId = l.ArticuloID;
+                            int importe = l.Importe;
+                            int cantidad = l.Cantidad;
 
                             if (neg.InsertarLinped(pedidoId, linea, productoId, importe, cantidad))
                             {
@@ -324,7 +336,8 @@ namespace capa_presentacion
                         VaciarCamposPedido();
                         VaciarCamposArticulos();
                         VaciarEtiquetasTotales();
-                        dataGridLinpeds.ItemsSource = null;
+                        listaLinpeds.Clear();
+                        dataGridLinpeds.ItemsSource = listaLinpeds;
                         dataGridLinpeds.IsEnabled = false;
                         cbUsu.IsEnabled = true;
                         dpFecha.IsEnabled = true;
@@ -344,9 +357,8 @@ namespace capa_presentacion
 
             for (int i = 0; i < dataGridLinpeds.Items.Count; i++)
             {
-                DataRowView row = (DataRowView) dataGridLinpeds.Items.CurrentItem;
-                if (!neg.InsertarLinped(pedidoId, (i + 1).ToString(), BuscarProductoId(row["Nombre"].ToString()),
-                    Convert.ToInt32(row["Importe"].ToString()), Convert.ToInt32(row["Cantidad"].ToString())))
+                Linped linea = (Linped) dataGridLinpeds.Items[i];
+                if (!neg.InsertarLinped(pedidoId, (i + 1).ToString(), linea.ArticuloID, linea.Importe, linea.Cantidad))
                     errores += 1;
             }
 
@@ -387,7 +399,8 @@ namespace capa_presentacion
                     VaciarCamposPedido();
                     VaciarCamposArticulos();
                     VaciarEtiquetasTotales();
-                    dataGridLinpeds.ItemsSource = null;
+                    listaLinpeds.Clear();
+                    dataGridLinpeds.ItemsSource = listaLinpeds;
                     dataGridLinpeds.IsEnabled = false;
                 }
             }
@@ -428,7 +441,7 @@ namespace capa_presentacion
                     VaciarCamposPedido();
                     VaciarCamposArticulos();
                     VaciarEtiquetasTotales();
-                    dataGridLinpeds.ItemsSource = null;
+                    dataGridLinpeds.ItemsSource = listaLinpeds;
                     dataGridLinpeds.IsEnabled = false;
                 }
             }
@@ -441,6 +454,8 @@ namespace capa_presentacion
             int importe = (art.Pvp == null ? 0 : Convert.ToInt32(art.Pvp));
 
             Linped linea = new Linped();
+            linea.PedidoID = (selectedOrder != null ? selectedOrder.PedidoID : null);
+            linea.ArticuloID = art.ArticuloID;
             linea.Linea = (dataGridLinpeds.Items.Count + 1).ToString();
             linea.ArticuloNombre = art.Nombre;
             linea.Importe = importe;
@@ -449,7 +464,7 @@ namespace capa_presentacion
             listaLinpeds.Add(linea);
 
             ActualizarTotales();
-            dataGridLinpeds.UnselectAll();
+            dataGridLinpeds.ItemsSource = listaLinpeds;
             dataGridLinpeds.IsEnabled = true;
             cbArt.SelectedItem = 0;
             upCant.Value = 1;
@@ -460,8 +475,8 @@ namespace capa_presentacion
             if (dataGridLinpeds.SelectedItems.Count == 1)
             {
                 listaLinpeds.RemoveAt(dataGridLinpeds.SelectedIndex);
-
-                dataGridLinpeds.UnselectAll();
+                dataGridLinpeds.ItemsSource = listaLinpeds;
+                vistaLinpeds.Source = listaLinpeds;
                 ActualizarTotales();
             }
         }

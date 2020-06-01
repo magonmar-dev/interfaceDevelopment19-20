@@ -28,7 +28,7 @@
         <Label Content="Contraseña" Style="{StaticResource label}" HorizontalAlignment="Left" Margin="149,145,0,0" VerticalAlignment="Top" FontFamily="Microsoft Sans Serif" FontSize="18"/>
         <TextBox x:Name="tbUsuario" Style="{StaticResource textBox}" HorizontalAlignment="Left" Height="30" Margin="149,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" FontSize="18"/>
         <PasswordBox x:Name="tbContra" Style="{StaticResource passBox}" HorizontalAlignment="Left" Height="30" Margin="149,175,0,0" VerticalAlignment="Top" Width="410" FontSize="18"/>
-        <Button x:Name="btnLogin" Content="ACCEDER" Click="btnLogin_Click" Style="{StaticResource button}" Margin="140,239,128,73.2" Width="410" Height="40" FontSize="20"/>
+        <Button x:Name="btnLogin" Content="ACCEDER" Click="btnLogin_Click" Style="{StaticResource button}" Margin="140,239,128,73.2" Width="410" Height="40" FontSize="18"/>
         <StatusBar x:Name="statusBar" HorizontalAlignment="Left" Height="29" Margin="0,332,0,0" VerticalAlignment="Top" Width="707" RenderTransformOrigin="0.498,-0.145">
             <StatusBar.Background>
                 <SolidColorBrush Color="Red" Opacity="0"/>

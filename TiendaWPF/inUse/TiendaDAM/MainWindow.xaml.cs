@@ -110,7 +110,15 @@ namespace capa_presentacion
 
         private void btnEstadisticas_Click(object sender, RoutedEventArgs e)
         {
+            titulo.Content = "Estadísticas";
+            titulo.Visibility = Visibility.Visible;
 
+            actualForm = new Estadisticas(neg, lblErrores);
+            actualForm.HorizontalAlignment = HorizontalAlignment.Center;
+            actualForm.VerticalAlignment = VerticalAlignment.Center;
+
+            panel.Children.Clear();
+            panel.Children.Add(actualForm);
         }
     }
 }
