@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class Objetivo
+    public class Objetivo
     {
         public string ObjetivoID { get; set; }
         public string Tipo { get; set; }

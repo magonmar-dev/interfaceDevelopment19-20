@@ -16,5 +16,10 @@ namespace capa_entidades
             ProvinciaID = provinciaID;
             Nombre = nombre;
         }
+
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }

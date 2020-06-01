@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class Pack
+    public class Pack
     {
         public string Cod { get; set; }
 

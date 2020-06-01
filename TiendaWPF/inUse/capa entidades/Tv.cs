@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class Tv
+    public class Tv
     {
         public string TvID { get; set; }
         public string Panel { get; set; }
-        public int Pantalla { get; set; }
+        public string Pantalla { get; set; }
         public string Resolucion { get; set; }
         public string HDReadyFullHD { get; set; }
-        public int Tdt { get; set; }
+        public bool Tdt { get; set; }
 
-        public Tv(string tvID, string panel, int pantalla, 
-            string resolucion, string hDReadyFullHD, int tdt)
+        public Tv(string tvID, string panel, string pantalla, 
+            string resolucion, string hDReadyFullHD, bool tdt)
         {
             TvID = tvID;
             Panel = panel;

@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="capa_presentacion.Usuarios"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="646" Width="952.2">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Diccionario.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Margin="0,0,0,0.4">
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <DataGrid x:Name="dataGrid" Style="{StaticResource datagrid}" HorizontalAlignment="Left" Height="421" Margin="26,200,0,0" VerticalAlignment="Top" Width="485" SelectionChanged="dataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Nombre}" Width="*" Header="Nombre"/>
+                <DataGridTextColumn Binding="{Binding Path=Apellidos}" Width="*" Header="Apellidos"/>
+                <DataGridTextColumn Binding="{Binding Path=Email}" Width="*" Header="Email"/>
+                <DataGridTextColumn Binding="{Binding Path=Dni}"  Width="*" Header="DNI"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <GroupBox Header="BUSCAR USUARIOS" Foreground="#FFC99FEE" HorizontalAlignment="Left" Height="174" Margin="26,10,0,0" VerticalAlignment="Top" Width="485">
+            <Grid Margin="0,0,-0.2,-1">
+                <Label Style="{StaticResource label}" Content="Nombre" Height="25" Margin="10,22,390,106" FontSize="14"/>
+                <TextBox x:Name="txbNomB" Style="{StaticResource textBox}" TextChanged="textChanged" Margin="84,22,240,106" Height="25" FontSize="14" TextWrapping="Wrap"/>
+                <Label Style="{StaticResource label}" Content="Apellidos" Height="25" Margin="10,67,390,61" FontSize="14"/>
+                <TextBox x:Name="txbApeB" Style="{StaticResource textBox}" TextChanged="textChanged" Height="25" Margin="84,67,240,61" FontSize="14" TextWrapping="Wrap"/>
+                <Label Style="{StaticResource label}" Content="Email" Height="25" Margin="238,22,175,106" FontSize="14"/>
+                <TextBox x:Name="txbEmailB" Style="{StaticResource textBox}" TextChanged="textChanged" Height="25" Margin="298,22,26,106" FontSize="14" TextWrapping="Wrap"/>
+                <Label Style="{StaticResource label}" Content="DNI" Height="25" Margin="249,67,175,61" FontSize="14"/>
+                <TextBox x:Name="txbDniB" Style="{StaticResource textBox}" TextChanged="textChanged" Height="25" Margin="298,67,26,61" FontSize="14" TextWrapping="Wrap"/>
+                <Button x:Name="btnBorrarFiltros" Content="Borrar filtros" Style="{StaticResource button}" Margin="337,110,26,10" FontSize="14" Click="btnBorrarFiltros_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="DATOS USUARIO" Foreground="#FFC99FEE" HorizontalAlignment="Left" Height="549" Margin="532,10,0,0" VerticalAlignment="Top" Width="387" UseLayoutRounding="False">
+            <Grid Margin="0,0,-1.8,-0.6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="43*"/>
+                    <ColumnDefinition Width="334*"/>
+                </Grid.ColumnDefinitions>
+                <Label Style="{StaticResource label}" Content="Email" Height="25" Margin="84.6,20,182,482" FontSize="14" Grid.Column="1"/>
+                <TextBox x:Name="txbEmail" Style="{StaticResource textBox}" Height="25" Margin="149.6,19,33,483" FontSize="14" Grid.Column="1" TextWrapping="Wrap"/>
+                <Label Style="{StaticResource label}" Content="Contraseña" Height="25" Margin="34.6,57,182,445" FontSize="14" Grid.Column="1"/>
+                <PasswordBox x:Name="txbPass" Style="{StaticResource passBox}" Height="25" Margin="149.6,57,33,445" FontSize="14" Grid.Column="1"/>
+                <Label Style="{StaticResource label}" Content="Repita la contraseña" Height="25" Margin="32,95,182,407" FontSize="14" Grid.ColumnSpan="2"/>
+                <PasswordBox x:Name="txbRepass" Style="{StaticResource passBox}" Height="25" Margin="149.6,96,33,406" FontSize="14" Grid.Column="1"/>
+                <Label Style="{StaticResource label}" Content="Nombre" Height="25" Margin="84.6,133,182,369" FontSize="14" Grid.Column="1"/>
+                <TextBox x:Name="txbNom" Style="{StaticResource textBox}" Height="25" Margin="149.6,134,33,368" FontSize="14" Grid.Column="1" TextWrapping="Wrap"/>
+                <Label Style="{StaticResource label}" Content="Apellidos" Height="25" Margin="58.6,171,182,331" FontSize="14" Grid.Column="1"/>
+                <TextBox x:Name="txbApe" Style="{StaticResource textBox}" Height="25" Margin="149.6,170,33,332" FontSize="14" Grid.Column="1" TextWrapping="Wrap"/>
+                <Label Style="{StaticResource label}" Content="DNI" Height="25" Margin="58.6,211,182,291" FontSize="14" Grid.Column="1"/>
+                <TextBox x:Name="txbDni" Style="{StaticResource textBox}" Height="25" Margin="149.6,211,33,291" FontSize="14" Grid.Column="1" TextWrapping="Wrap"/>
+                <Label Style="{StaticResource label}" Content="Teléfono" Height="25" Margin="69.6,251,182,251" FontSize="14" Grid.Column="1"/>
+                <TextBox x:Name="txbTel" Style="{StaticResource textBox}" Height="25" Margin="149.6,250,33,252" FontSize="14" Grid.Column="1" TextWrapping="Wrap"/>
+                <Label Style="{StaticResource label}" Content="Dirección" Height="25" Margin="69.6,293,182,209" FontSize="14" Grid.Column="1"/>
+                <TextBox x:Name="txbDir" Style="{StaticResource textBox}" Height="25" Margin="149.6,293,33,209" FontSize="14" Grid.Column="1" TextWrapping="Wrap"/>
+                <TextBox x:Name="txbDir2" Style="{StaticResource textBox}" Height="25" Margin="149.6,322,33,180" FontSize="14" Grid.Column="1" TextWrapping="Wrap"/>
+                <Label Style="{StaticResource label}" Content="Código postal" Height="26" Margin="34.6,364,182,137" FontSize="14" Grid.Column="1"/>
+                <TextBox x:Name="txbCod" Style="{StaticResource textBox}" Height="25" Margin="149.6,363,33,139" FontSize="14" Grid.Column="1" TextWrapping="Wrap"/>
+                <Label Style="{StaticResource label}" Content="Provincia" Height="25" Margin="34.6,404,182,98" FontSize="14" Grid.Column="1"/>
+                <ComboBox x:Name="cbProvincia" Style="{StaticResource comboBox}" Height="25" FontSize="14" Margin="149.6,404,33,98" SelectionChanged="cbProvincia_SelectionChanged" Grid.Column="1"/>
+                <Label Style="{StaticResource label}" Content="Pueblo" Height="25" Margin="34.6,443,182,59" FontSize="14" Grid.Column="1"/>
+                <ComboBox x:Name="cbPueblo" Style="{StaticResource comboBox}" Height="25" FontSize="14" Margin="149.6,443,33,59" IsEnabled="False" Grid.Column="1"/>
+                <Label Style="{StaticResource label}" Content="Fecha de nacimiento" Height="25" Margin="21,481,182,21" FontSize="14" Grid.ColumnSpan="2"/>
+                <DatePicker x:Name="dpFecha" Style="{StaticResource datePicker}" HorizontalAlignment="Left" Margin="149.6,481,0,0" VerticalAlignment="Top" 
+                    Height="25" FontSize="14" Width="149" Grid.Column="1"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="btnIns" Content="Insertar" Style="{StaticResource button}" FontSize="18" Margin="532.3,579,319.7,0" VerticalAlignment="Top" Height="42" Width="100" Click="btnIns_Click"/>
+        <Button x:Name="btnMod" Content="Modificar" Style="{StaticResource button}" FontSize="18" Margin="673,579,174,0" VerticalAlignment="Top" Height="42" Width="105" Click="btnMod_Click"/>
+        <Button x:Name="btnEli" Content="Eliminar" Style="{StaticResource button}" FontSize="18" Margin="819,579,33,0" VerticalAlignment="Top" Height="42" Width="100" Click="btnEli_Click"/>
+    </Grid>
+</UserControl>

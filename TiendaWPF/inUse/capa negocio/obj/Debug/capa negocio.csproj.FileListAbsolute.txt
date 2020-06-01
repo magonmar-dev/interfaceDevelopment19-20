@@ -53,3 +53,20 @@ D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa negocio\obj\
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.csproj.CopyComplete
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.dll
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa negocio\obj\Debug\capa negocio.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\capa negocio.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\capa negocio.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\capa negocio.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\capa datos.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\capa entidades.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\Newtonsoft.Json.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\System.Net.Http.Formatting.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\capa datos.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\capa datos.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\capa entidades.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\capa entidades.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\Newtonsoft.Json.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\bin\Debug\System.Net.Http.Formatting.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\obj\Debug\capa negocio.csprojAssemblyReference.cache
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\obj\Debug\capa negocio.csproj.CopyComplete
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\obj\Debug\capa negocio.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa negocio\obj\Debug\capa negocio.pdb

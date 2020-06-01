@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class Memoria
+    public class Memoria
     {
-        public string MemorioID { get; set; }
+        public string MemoriaID { get; set; }
         public string Tipo { get; set; }
 
-        public Memoria(string memorioID, string tipo)
+        public Memoria(string memoriaID, string tipo)
         {
-            MemorioID = memorioID;
+            MemoriaID = memoriaID;
             Tipo = tipo;
         }
     }

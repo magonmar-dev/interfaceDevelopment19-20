@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class TipoArticulo
+    public class TipoArticulo
     {
-        public int TipoArticuloID { get; set; }
+        public string TipoArticuloID { get; set; }
         public string Descripcion { get; set; }
 
-        public TipoArticulo(int tipoArticuloID, string descripcion)
+        public TipoArticulo(string tipoArticuloID, string descripcion)
         {
             TipoArticuloID = tipoArticuloID;
             Descripcion = descripcion;
+        }
+
+        public override string ToString()
+        {
+            return Descripcion;
         }
     }
 }

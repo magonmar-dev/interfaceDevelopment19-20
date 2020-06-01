@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class Camara
+    public class Camara
     {
         public string CamaraID { get; set; }
         public string Resolucion { get; set; }

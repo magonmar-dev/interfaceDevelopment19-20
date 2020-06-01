@@ -8,7 +8,7 @@ namespace capa_entidades
 {
     public class Usuario
     {
-        public int UsuarioID { get; set; }
+        public string UsuarioID { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string Nombre { get; set; }
@@ -22,7 +22,7 @@ namespace capa_entidades
         public string ProvinciaID { get; set; }
         public string Nacido { get; set; }
 
-        public Usuario(int usuarioID, string email, string contra, string nombre, string apellidos, string dni, string telefono, string calle, string calle2, string codpos, string puebloID, string provinciaID, string nacido)
+        public Usuario(string usuarioID, string email, string contra, string nombre, string apellidos, string dni, string telefono, string calle, string calle2, string codpos, string puebloID, string provinciaID, string nacido)
         {
             UsuarioID = usuarioID;
             Email = email;
@@ -37,6 +37,11 @@ namespace capa_entidades
             PuebloID = puebloID;
             ProvinciaID = provinciaID;
             Nacido = nacido;
+        }
+
+        public override string ToString()
+        {
+            return Nombre + " (" + Dni + ")";
         }
     }
 }

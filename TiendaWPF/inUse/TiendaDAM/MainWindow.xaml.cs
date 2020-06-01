@@ -23,6 +23,7 @@ namespace capa_presentacion
     public partial class MainWindow : Window
     {
         private Negocio neg;
+        private UserControl actualForm;
 
         public MainWindow(string usuario, Negocio neg)
         {
@@ -30,8 +31,15 @@ namespace capa_presentacion
 
             this.neg = neg;
 
-            lblUsuario.Content = "Usuario: " + usuario;
             lblHora.Content = DateTime.Now.ToString("HH:mm");
+            lblErrores.Content = "";
+
+            userIcon.Content = usuario.Substring(0, 1).ToUpper();
+            ToolTip t = new ToolTip();
+            t.Content = usuario;
+            userIcon.ToolTip = t;
+
+            CargarFormUsuarios();
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
@@ -54,6 +62,55 @@ namespace capa_presentacion
         {
             if (!AskForClosing())
                 e.Cancel = true;
+        }
+
+        private void CargarFormUsuarios()
+        {
+            titulo.Content = "Usuarios";
+            titulo.Visibility = Visibility.Visible;
+
+            actualForm = new Usuarios(neg, lblErrores);
+            actualForm.HorizontalAlignment = HorizontalAlignment.Center;
+            actualForm.VerticalAlignment = VerticalAlignment.Center;
+
+            panel.Children.Clear();
+            panel.Children.Add(actualForm);
+        }
+
+        private void btnUsuarios_Click(object sender, RoutedEventArgs e)
+        {
+            CargarFormUsuarios();
+        }
+
+        private void btnProductos_Click(object sender, RoutedEventArgs e)
+        {
+            titulo.Content = "Productos";
+            titulo.Visibility = Visibility.Visible;
+
+            actualForm = new Productos(neg);
+            actualForm.HorizontalAlignment = HorizontalAlignment.Center;
+            actualForm.VerticalAlignment = VerticalAlignment.Center;
+
+            panel.Children.Clear();
+            panel.Children.Add(actualForm);
+        }
+
+        private void btnPedidos_Click(object sender, RoutedEventArgs e)
+        {
+            titulo.Content = "Pedidos";
+            titulo.Visibility = Visibility.Visible;
+
+            actualForm = new Pedidos(neg);
+            actualForm.HorizontalAlignment = HorizontalAlignment.Center;
+            actualForm.VerticalAlignment = VerticalAlignment.Center;
+
+            panel.Children.Clear();
+            panel.Children.Add(actualForm);
+        }
+
+        private void btnEstadisticas_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

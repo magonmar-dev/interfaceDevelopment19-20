@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class DirEnvio
+    public class DirEnvio
     {
-        public int UsuarioID { get; set; }
+        public string UsuarioID { get; set; }
         public string Calle { get; set; }
         public string Calle2 { get; set; }
         public string Codpos { get; set; }
         public string LocalidadID { get; set; }
         public string ProvinciaID { get; set; }
 
-        public DirEnvio(int usuarioID, string calle, string calle2, 
+        public DirEnvio(string usuarioID, string calle, string calle2, 
             string codpos, string localidadID, string provinciaID)
         {
             UsuarioID = usuarioID;

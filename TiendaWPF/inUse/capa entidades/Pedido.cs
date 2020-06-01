@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class Pedido
+    public class Pedido
     {
-        public int PedidoID { get; set; }
-        public int UsuarioID { get; set; }
+        public string PedidoID { get; set; }
+        public string UsuarioID { get; set; }
         public string Fecha { get; set; }
 
-        public Pedido(int pedidoID, int usuarioID, string fecha)
+        public string UsuarioNombre { get; set; }
+
+        public Pedido() {}
+
+        public Pedido(string pedidoID, string usuarioID, string fecha)
         {
             PedidoID = pedidoID;
             UsuarioID = usuarioID;

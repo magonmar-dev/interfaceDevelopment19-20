@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\TiendaDAM\obj\Debug\
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\obj\Debug\
 presentacion
 none
 false
 DEBUG;TRACE
-D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\TiendaDAM\App.xaml
-3-136763888
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\TiendaDAM\App.xaml
+61454127932
 
-7539147240
-14-648587524
-Diccionario_plantillas.xaml;Login.xaml;MainWindow.xaml;
+101207577816
+201222443980
+Diccionario.xaml;Login.xaml;MainWindow.xaml;Pedidos.xaml;Productos.xaml;Usuarios.xaml;
 
 True
 

@@ -42,3 +42,17 @@ D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa datos\obj\De
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa datos\obj\Debug\capa datos.csproj.CopyComplete
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa datos\obj\Debug\capa datos.dll
 D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto 2ev\TiendaDAM\capa datos\obj\Debug\capa datos.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\bin\Debug\capa datos.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\bin\Debug\capa datos.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\bin\Debug\capa datos.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\bin\Debug\capa entidades.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\bin\Debug\Newtonsoft.Json.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\bin\Debug\System.Net.Http.Formatting.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\bin\Debug\capa entidades.pdb
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\bin\Debug\capa entidades.dll.config
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\bin\Debug\Newtonsoft.Json.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\bin\Debug\System.Net.Http.Formatting.xml
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\obj\Debug\capa datos.csprojAssemblyReference.cache
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\obj\Debug\capa datos.csproj.CopyComplete
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\obj\Debug\capa datos.dll
+D:\DAM\2º DAM\Desarrollo de Interfaces\Proyecto WPF\TiendaDAM\capa datos\obj\Debug\capa datos.pdb

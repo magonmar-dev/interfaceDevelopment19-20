@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class Marca
+    public class Marca
     {
         public string MarcaID { get; set; }
         public string Empresa { get; set; }

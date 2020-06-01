@@ -33,10 +33,12 @@ namespace capa_presentacion
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            f2 = new MainWindow(tbUsuario.Text, neg);
-
-            if (neg.Validar(tbUsuario.Text, tbContra.Password))
+            f2 = new MainWindow("maria", neg);
+            f2.Show();
+            Hide();
+            /*if (neg.Validar(tbUsuario.Text, tbContra.Password))
             {
+                f2 = new MainWindow(tbUsuario.Text, neg);
                 f2.Show();
                 Hide();
             }
@@ -47,7 +49,7 @@ namespace capa_presentacion
                 lblInfo.Content = "Acceso denegado. Intentos restantes: " + maxIntentos;
                 if (maxIntentos <= 0)
                     App.Current.Shutdown();
-            }
+            }*/
         }
     }
 }

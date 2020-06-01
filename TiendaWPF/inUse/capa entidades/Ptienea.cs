@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class Ptienea
+    public class Ptienea
     {
         public string Pack { get; set; }
         public string Articulo { get; set; }

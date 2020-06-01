@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:capa_presentacion"
         mc:Ignorable="d"
         Title="TiendaDAM" HorizontalAlignment="Center" Height="785.9" Width="1145.232"
-            UseLayoutRounding="True" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Window_Closing">
+            UseLayoutRounding="True" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Window_Closing" Icon="icono.png">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Diccionario_plantillas.xaml"/>
+                <ResourceDictionary Source="Diccionario.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -27,32 +27,31 @@
         </Grid.Background>
         <StatusBar HorizontalAlignment="Left" Height="30" Margin="0,718,0,0" VerticalAlignment="Top" Width="1139" Background="#FFC99FEE">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="30">
-                <Label x:Name="lblErrores" Height="30" Width="936" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
-                <Label x:Name="lblUsuario" Height="30" Width="143" Content="Usuario: " VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
+                <Label x:Name="lblErrores" Height="30" Width="1065" VerticalAlignment="Center" Foreground="Black" VerticalContentAlignment="Center" FontSize="16" Margin="0,0,0,0.4"/>
                 <Label x:Name="lblHora" Height="30" Width="50" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
             </StackPanel>
         </StatusBar>
-        <Grid HorizontalAlignment="Left" Height="718" VerticalAlignment="Top" Width="1139">
-            <StackPanel x:Name="menu_panel" Orientation="Vertical" Style="{StaticResource menu_panel}" HorizontalAlignment="Left" Height="718" VerticalAlignment="Top" Width="115">
-                <Button x:Name="btnUsuarios" Style="{StaticResource b_menu}">
+        <Grid HorizontalAlignment="Left" Height="718" VerticalAlignment="Top" Width="1134">
+            <StackPanel x:Name="menu_panel" Orientation="Vertical" Style="{StaticResource menu_panel}" HorizontalAlignment="Left" Height="718" VerticalAlignment="Top" Width="115" Panel.ZIndex="2">
+                <Button x:Name="btnUsuarios" Style="{StaticResource b_menu}" Click="btnUsuarios_Click">
                     <StackPanel Orientation="Horizontal" Height="80" Width="250" Margin="10">
                         <Image Source="usuarios.png" VerticalAlignment="Center"/>
                         <Label Content="Usuarios" VerticalAlignment="Center" Foreground="#FFC99FEE" Margin="20,0,0,0"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnProductos" Style="{StaticResource b_menu}">
+                <Button x:Name="btnProductos" Style="{StaticResource b_menu}" Click="btnProductos_Click">
                     <StackPanel Orientation="Horizontal" Height="70" Width="250" Margin="10">
                         <Image Source="productos.png" VerticalAlignment="Center"/>
                         <Label Content="Productos" VerticalAlignment="Center" Foreground="#FFC99FEE" Margin="20,0,0,0"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnPedidos" Style="{StaticResource b_menu}">
+                <Button x:Name="btnPedidos" Style="{StaticResource b_menu}" Click="btnPedidos_Click">
                     <StackPanel Orientation="Horizontal" Height="75" Width="250" Margin="10">
                         <Image Source="pedidos.png" VerticalAlignment="Center"/>
                         <Label Content="Pedidos" VerticalAlignment="Center" Foreground="#FFC99FEE" Margin="20,0,0,0"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="btnEstadisticas" Style="{StaticResource b_menu}">
+                <Button x:Name="btnEstadisticas" Style="{StaticResource b_menu}" Click="btnEstadisticas_Click">
                     <StackPanel Orientation="Horizontal" Height="75" Width="250" Margin="10">
                         <Image Source="estadisticas.png" VerticalAlignment="Center"/>
                         <Label Content="Estadísticas" VerticalAlignment="Center" Foreground="#FFC99FEE" Margin="20,0,0,0"/>
@@ -71,8 +70,12 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-            <StackPanel x:Name="usercontrol_panel" HorizontalAlignment="Right" Height="718" VerticalAlignment="Top" Width="957">
-            </StackPanel>
+            <StackPanel x:Name="panel" HorizontalAlignment="Right" Height="648" VerticalAlignment="Top" Width="1019" Margin="0,70,0,0"/>
+            <Label x:Name="titulo" Content="Titulo" Foreground="#FFC99FEE" Margin="115,0,65,648" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48" FontFamily="Segoe UI Semibold" Panel.ZIndex="1"/>
+            <Grid Panel.ZIndex="1" Width="60" Height="60" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5">
+                <Border x:Name="userBorder" Background="#FFC99FEE" BorderBrush="Black" BorderThickness="4,4,4,4" CornerRadius="40,40,40,40"/>
+                <Label x:Name="userIcon" Content="M" HorizontalAlignment="Center" FontSize="32" FontWeight="Bold" Margin="0,2,0,0"/>
+            </Grid>
         </Grid>
 
     </Grid>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class Stock
+    public class Stock
     {
         public string ArticuloID { get; set; }
         public int Disponible { get; set; }

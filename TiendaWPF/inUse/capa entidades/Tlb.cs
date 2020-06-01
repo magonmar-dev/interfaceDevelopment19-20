@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capa_entidades
 {
-    class Tlb
+    public class Tlb
     {
         public int A { get; set; }
         public int B { get; set; }
